@@ -1,0 +1,212 @@
+{
+  "BASE": {
+    "name": "Base Enterprise Technology",
+    "description": "Applies to all in-scope enterprise technology.",
+    "sources": [
+      "ISO/IEC 27001",
+      "ISO/IEC 20000-1",
+      "ISO 22301",
+      "NIST CSF 2.0",
+      "NIST SSDF"
+    ],
+    "emphasis": [
+      "Governance",
+      "Security",
+      "Resilience",
+      "Operations",
+      "Evidence",
+      "People"
+    ]
+  },
+  "UK-DATA": {
+    "name": "UK Personal Data",
+    "description": "Activate for UK GDPR / Data Protection Act / DUAA-regulated personal data processing.",
+    "sources": [
+      "UK GDPR",
+      "Data Protection Act 2018",
+      "Data (Use and Access) Act 2025",
+      "ICO accountability and privacy-by-design guidance"
+    ],
+    "emphasis": [
+      "Data & Privacy",
+      "Security",
+      "Evidence",
+      "AI"
+    ]
+  },
+  "EU-DATA": {
+    "name": "EU Personal Data",
+    "description": "Activate for EU GDPR-regulated processing.",
+    "sources": [
+      "EU GDPR"
+    ],
+    "emphasis": [
+      "Data & Privacy",
+      "Security",
+      "Evidence",
+      "Third Parties"
+    ]
+  },
+  "EU-AI": {
+    "name": "EU AI Act",
+    "description": "Activate for AI systems or GPAI within EU AI Act territorial/material scope.",
+    "sources": [
+      "Regulation (EU) 2024/1689 and amendments",
+      "European Commission AI Act guidance"
+    ],
+    "emphasis": [
+      "AI",
+      "Data & Privacy",
+      "Governance",
+      "Evidence",
+      "People"
+    ]
+  },
+  "EU-NIS2": {
+    "name": "EU NIS2",
+    "description": "Activate for essential/important entities in Member States transposing NIS2.",
+    "sources": [
+      "Directive (EU) 2022/2555 and national transposition"
+    ],
+    "emphasis": [
+      "Governance",
+      "Security",
+      "Resilience",
+      "Third Parties",
+      "People",
+      "Evidence"
+    ]
+  },
+  "EU-DORA": {
+    "name": "EU Financial Services \u2014 DORA",
+    "description": "Activate for financial entities within DORA scope and relevant ICT third-party arrangements.",
+    "sources": [
+      "Regulation (EU) 2022/2554",
+      "DORA delegated/implementing acts"
+    ],
+    "emphasis": [
+      "Governance",
+      "Resilience",
+      "Third Parties",
+      "Security",
+      "Evidence",
+      "Operations"
+    ]
+  },
+  "UK-FS": {
+    "name": "UK Financial Services Operational Resilience",
+    "description": "Activate for firms within FCA/PRA operational-resilience rules and related supervisory expectations.",
+    "sources": [
+      "FCA PS21/3",
+      "PRA PS6/21 / SS1/21",
+      "UK financial-services requirements as applicable"
+    ],
+    "emphasis": [
+      "Resilience",
+      "Governance",
+      "Third Parties",
+      "Evidence"
+    ]
+  },
+  "UK-NIS": {
+    "name": "UK NIS / Cyber Resilience",
+    "description": "Activate for operators/digital providers under current UK NIS rules and track the Cyber Security and Resilience Bill as it progresses.",
+    "sources": [
+      "Network and Information Systems Regulations 2018",
+      "NCSC CAF",
+      "Cyber Security and Resilience Bill when/if enacted"
+    ],
+    "emphasis": [
+      "Security",
+      "Resilience",
+      "Governance",
+      "Third Parties",
+      "Evidence"
+    ]
+  },
+  "PAY": {
+    "name": "Payment Card",
+    "description": "Activate for environments handling account/cardholder data within PCI DSS scope.",
+    "sources": [
+      "PCI DSS v4.0.1"
+    ],
+    "emphasis": [
+      "Security",
+      "Data & Privacy",
+      "Operations",
+      "Evidence"
+    ]
+  },
+  "US-PUBLIC": {
+    "name": "US Public Company Cyber Disclosure",
+    "description": "Activate for SEC registrants subject to cyber incident and governance disclosure requirements.",
+    "sources": [
+      "SEC cybersecurity risk management, strategy, governance and incident disclosure rules"
+    ],
+    "emphasis": [
+      "Governance",
+      "Security",
+      "Resilience",
+      "Evidence"
+    ]
+  },
+  "US-HEALTH": {
+    "name": "US Health \u2014 HIPAA",
+    "description": "Activate for HIPAA covered entities/business associates handling ePHI.",
+    "sources": [
+      "HIPAA Security Rule",
+      "HITECH Act"
+    ],
+    "emphasis": [
+      "Security",
+      "Data & Privacy",
+      "Resilience",
+      "Third Parties",
+      "Evidence"
+    ]
+  },
+  "AU-APRA": {
+    "name": "Australia \u2014 APRA",
+    "description": "Activate for APRA-regulated entities.",
+    "sources": [
+      "CPS 230 Operational Risk Management",
+      "CPS 234 Information Security"
+    ],
+    "emphasis": [
+      "Governance",
+      "Resilience",
+      "Security",
+      "Third Parties",
+      "Evidence"
+    ]
+  },
+  "CA-OSFI": {
+    "name": "Canada \u2014 OSFI Technology & Cyber",
+    "description": "Activate for federally regulated financial institutions subject to OSFI B-13 and related guidance.",
+    "sources": [
+      "OSFI Guideline B-13",
+      "OSFI third-party/operational-risk guidance as applicable"
+    ],
+    "emphasis": [
+      "Governance",
+      "Security",
+      "Resilience",
+      "Third Parties",
+      "Evidence"
+    ]
+  },
+  "SG-MAS": {
+    "name": "Singapore \u2014 MAS Technology Risk",
+    "description": "Activate for financial institutions subject to applicable MAS technology-risk notices/guidelines.",
+    "sources": [
+      "MAS Technology Risk Management Guidelines and applicable Notices"
+    ],
+    "emphasis": [
+      "Security",
+      "Resilience",
+      "Governance",
+      "Third Parties",
+      "Evidence"
+    ]
+  }
+}

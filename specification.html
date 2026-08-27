@@ -1,0 +1,1525 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Meridian Standard — Specification</title><link rel="stylesheet" href="styles.css"></head><body class="spec-body"><header class="nav-wrap"><nav class="nav shell"><a class="brand" href="index.html"><span class="mark">M</span><span>MERIDIAN</span></a><div class="nav-links"><a href="index.html#philosophy">Philosophy</a><a href="index.html#model">Operating model</a><a href="index.html#standard">Clauses</a><a href="index.html#profiles">Regulation</a></div><a class="pill small" href="index.html">Overview</a></nav></header><main><section class="spec-hero shell"><div class="eyebrow">Enterprise Technology Operating Standard · Draft v0.1</div><h1>Meridian Standard</h1><p class="spec-meta">A durable, AI-native operating standard for governing, building, changing and operating enterprise technology. 81 normative clauses, reference regulatory profiles, practices, work products and an adoption model.</p><div class="spec-actions"><a class="pill" href="SPECIFICATION.md">Raw Markdown</a><a class="pill ghost" href="standard-clauses.json">Clauses JSON</a></div></section><div class="spec-layout shell"><aside class="spec-toc"><b>Contents</b><a class="toc-l2" href="#enterprise-technology-operating-standard-draft-v0-1">Enterprise Technology Operating Standard — Draft v0.1</a><a class="toc-l2" href="#1-executive-proposition">1. Executive proposition</a><a class="toc-l2" href="#2-why-this-paradigm-exists">2. Why this paradigm exists</a><a class="toc-l2" href="#3-the-meridian-constitution">3. The Meridian Constitution</a><a class="toc-l2" href="#4-the-operating-model-four-planes-and-one-thread">4. The operating model: four planes and one thread</a><a class="toc-l2" href="#5-teaming-the-human-system">5. Teaming: the human system</a><a class="toc-l2" href="#6-the-unit-of-work-missions-passages-and-proof">6. The unit of work: Missions, Passages and Proof</a><a class="toc-l2" href="#7-meridian-lifecycle">7. Meridian lifecycle</a><a class="toc-l2" href="#8-ai-native-enterprise-the-second-workforce">8. AI-native enterprise: the second workforce</a><a class="toc-l2" href="#9-work-product-standard">9. Work-product standard</a><a class="toc-l2" href="#10-ceremonies-and-exercises-practices-worth-attending">10. Ceremonies and exercises: practices worth attending</a><a class="toc-l2" href="#11-the-control-graph-and-assurance-compiler">11. The Control Graph and Assurance Compiler</a><a class="toc-l2" href="#12-risk-model">12. Risk model</a><a class="toc-l2" href="#13-regulatory-architecture">13. Regulatory architecture</a><a class="toc-l2" href="#14-normative-requirements">14. Normative requirements</a><a class="toc-l2" href="#15-productivity-system">15. Productivity system</a><a class="toc-l2" href="#16-technical-reference-architecture-for-meridian-itself">16. Technical reference architecture for Meridian itself</a><a class="toc-l2" href="#17-conformance-model">17. Conformance model</a><a class="toc-l2" href="#18-adoption-from-existing-enterprise-it-to-meridian">18. Adoption: from existing enterprise IT to Meridian</a><a class="toc-l2" href="#19-what-makes-meridian-fun">19. What makes Meridian fun</a><a class="toc-l2" href="#20-anti-patterns">20. Anti-patterns</a><a class="toc-l2" href="#21-governance-of-the-standard-itself">21. Governance of the Standard itself</a><a class="toc-l2" href="#22-source-and-inspiration-register">22. Source and inspiration register</a><a class="toc-l2" href="#23-one-sentence-test">23. One-sentence test</a></aside><article class="spec-doc"><h1 id="meridian-standard">Meridian Standard</h1>
+<h2 id="enterprise-technology-operating-standard-draft-v0-1">Enterprise Technology Operating Standard — Draft v0.1</h2>
+<p><strong>Status:</strong> Original working specification<br />
+<strong>Date:</strong> 26 August 2026<br />
+<strong>Purpose:</strong> A durable, AI-native standard for governing, building, changing and operating enterprise technology.<br />
+<strong>Normative language:</strong> <strong>shall</strong> = required for conformance; <strong>should</strong> = recommended; <strong>may</strong> = optional.</p>
+<blockquote>
+<p>Meridian is not Agile 2.0. It is an operating standard for a world in which software, infrastructure, data, AI agents, suppliers, regulation and human judgement form one continuously changing industrial system.</p>
+</blockquote>
+<hr />
+<h2 id="1-executive-proposition">1. Executive proposition</h2>
+<p>Most enterprise technology operating models split reality into separate bureaucracies: strategy, projects, product, architecture, security, risk, delivery, operations, audit and finance. Work crosses these seams through tickets, committees, stage gates and status meetings. The organisation pays for the same fact repeatedly: first to build it, then to explain it, then to approve it, then to audit it.</p>
+<p>Meridian replaces that model with a simple proposition:</p>
+<p><strong>Flow with proof.</strong></p>
+<p>Work should move as quickly as its risk allows, through paved roads that generate evidence as a side-effect. Humans spend their scarce attention on purpose, novelty, judgement, relationships and exceptions. Machines perform repeatable analysis, coordination, verification, documentation and bounded execution. Every material decision remains attributable. Every control can be traced to an obligation. Every important service can demonstrate how it survives disruption.</p>
+<p>Meridian aims to make good enterprise technology feel less like a compliance programme and more like a high-performing studio connected to a modern industrial control system.</p>
+<h3 id="1-1-what-meridian-optimises">1.1 What Meridian optimises</h3>
+<p>Meridian optimises six things simultaneously:</p>
+<ol>
+<li><strong>Purpose</strong> — technology work produces measurable outcomes rather than activity.</li>
+<li><strong>Flow</strong> — ideas travel to safe production with minimal waiting, hand-offs and unmanaged work in progress.</li>
+<li><strong>Platform</strong> — repeated complexity becomes reusable self-service capability.</li>
+<li><strong>Proof</strong> — evidence is generated continuously and can be replayed.</li>
+<li><strong>Resilience</strong> — critical services are designed and tested around real-world impact tolerances.</li>
+<li><strong>Learning</strong> — telemetry, customer behaviour, incidents and experiments continuously reshape the system.</li>
+</ol>
+<p>A seventh quality cuts across all six: <strong>joy</strong>. Meridian treats boredom, needless meetings, repeated form-filling, unclear ownership and avoidable cognitive load as design defects. Fun is not mandatory cheerfulness; it is the experience of clarity, progress, mastery, autonomy, human connection and visible impact.</p>
+<hr />
+<h2 id="2-why-this-paradigm-exists">2. Why this paradigm exists</h2>
+<h3 id="2-1-the-historical-pattern">2.1 The historical pattern</h3>
+<p>The durable industrial revolutions did not simply introduce a clever machine. They changed the surrounding system. Steam, electricity and information technology are commonly studied as <strong>general-purpose technologies</strong>: technologies that become pervasive, improve over time and unlock complementary innovation elsewhere in the economy. Historical research on electrification also shows that productivity gains arrived alongside capital deepening and organisational change—not merely by replacing one power source with another.</p>
+<p>Meridian draws eight recurring lessons from roughly a millennium of technological and organisational change:</p>
+<table>
+<thead>
+<tr>
+  <th>Historical pattern</th>
+  <th>Enterprise technology implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Common infrastructure multiplies local invention.</strong> Roads, grids, networks and cloud platforms reduce the cost of every downstream activity.</td>
+  <td>Invest in platform products and self-service paved roads before asking each team to solve common problems independently.</td>
+</tr>
+<tr>
+  <td><strong>Standards make scale possible.</strong> Shared measures, interfaces, interchangeable components and protocols enable coordination without constant negotiation.</td>
+  <td>Standardise interfaces, evidence, identity, service metadata and control semantics; keep product choices flexible behind those boundaries.</td>
+</tr>
+<tr>
+  <td><strong>Productivity requires organisational redesign.</strong> Electrifying a line shaft without redesigning the factory leaves value on the table.</td>
+  <td>Do not bolt AI onto ticket queues and committee-heavy governance. Redesign decision rights, work products and controls around AI-native capability.</td>
+</tr>
+<tr>
+  <td><strong>Mechanisation moves people up the value chain.</strong> Machines absorb repeatable effort; people move toward judgement, design, supervision and new crafts.</td>
+  <td>Automate evidence gathering, routine testing, reporting and low-risk actions; strengthen human roles in intent, ethics, exception handling and system design.</td>
+</tr>
+<tr>
+  <td><strong>Measurement creates controllability.</strong> Better instruments made industrial systems safer, repeatable and optimisable.</td>
+  <td>Build telemetry for outcomes, flow, reliability, security, cost, AI behaviour and control effectiveness into every service.</td>
+</tr>
+<tr>
+  <td><strong>Modularity contains failure and accelerates improvement.</strong> Interchangeable parts and modular systems allow local change without rebuilding the whole.</td>
+  <td>Design composable services, explicit contracts, small blast radii and reversible change.</td>
+</tr>
+<tr>
+  <td><strong>Safety regulation becomes part of mature infrastructure.</strong> High-performing industries integrate assurance into engineering rather than treating it as optional paperwork.</td>
+  <td>Convert obligations into machine-testable controls and continuously retained proof wherever possible.</td>
+</tr>
+<tr>
+  <td><strong>New general-purpose technologies diffuse slowly when old operating assumptions persist.</strong></td>
+  <td>Treat AI as a new organisational utility, not as a chatbot licence. Change the operating model around it.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-2-the-ai-analogy">2.2 The AI analogy</h3>
+<p>Meridian treats AI like electricity in an early factory: its real value appears when the organisation is redesigned around its properties. AI is therefore not a separate innovation workstream. It is a horizontal capability present in governance, research, architecture, engineering, security, assurance, operations, finance, procurement and learning.</p>
+<hr />
+<h2 id="3-the-meridian-constitution">3. The Meridian Constitution</h2>
+<p>These principles are intentionally stable. Tools, regulations and architectures will change; the constitution should survive them.</p>
+<ol>
+<li><strong>Outcomes before activity.</strong> No large body of work exists without a measurable purpose and stop condition.</li>
+<li><strong>Flow before ceremony.</strong> Ritual is justified only when it improves decisions, learning, trust or flow.</li>
+<li><strong>Proof before assertion.</strong> Important claims should be backed by observable evidence.</li>
+<li><strong>Guardrails before gates.</strong> Prefer automated, preventative constraints and paved roads over queues for manual approval.</li>
+<li><strong>Reversibility before certainty.</strong> Make small, observable, reversible changes when uncertainty is high.</li>
+<li><strong>Platforms before repeated toil.</strong> Solve common hard problems once and make the solution easy to consume.</li>
+<li><strong>Human accountability over machine autonomy.</strong> AI may act; a human governance system remains accountable for the authority granted.</li>
+<li><strong>Secure, private and resilient by default.</strong> Safety properties belong in the default path, not in heroic review at the end.</li>
+<li><strong>Open interfaces over local empires.</strong> Stable boundaries and portable knowledge outlive teams and vendors.</li>
+<li><strong>Measure systems, not people.</strong> Metrics improve the system; they are not weapons for ranking individual knowledge workers.</li>
+<li><strong>Operations are design feedback.</strong> Incidents, SLOs, cost and customer behaviour are inputs to product and architecture, not downstream noise.</li>
+<li><strong>Joy is an engineering property.</strong> Clarity, autonomy, mastery, focus and visible progress are deliberately designed into the system.</li>
+</ol>
+<hr />
+<h2 id="4-the-operating-model-four-planes-and-one-thread">4. The operating model: four planes and one thread</h2>
+<p>Meridian organises enterprise technology into four planes connected by one digital thread.</p>
+<h3 id="4-1-intent-plane">4.1 Intent Plane</h3>
+<p>The Intent Plane contains strategy, customer outcomes, risk appetite, regulatory obligations, capital constraints and explicit missions. Its job is to say <strong>what matters and what must not be harmed</strong>.</p>
+<p>Key work products: enterprise outcome map, risk appetite, regulatory inventory, mission portfolio, critical-service list and investment theses.</p>
+<h3 id="4-2-platform-plane">4.2 Platform Plane</h3>
+<p>The Platform Plane turns repeated complexity into reusable capabilities: cloud landing zones, identity, deployment, observability, data, AI gateways, secrets, policy engines, evidence capture, service catalogues, developer environments and common operational tooling.</p>
+<p>Its job is to make the compliant, secure and observable path the fastest path. Platform teams are product teams with users, roadmaps, SLOs and adoption metrics.</p>
+<h3 id="4-3-work-plane">4.3 Work Plane</h3>
+<p>The Work Plane is where persistent crews discover, build, integrate, operate and improve services. Work is continuous pull, not a mandatory sprint conveyor belt. Teams may use Scrum, Kanban, Shape Up, XP or other techniques locally when useful, but Meridian does not require a branded delivery method.</p>
+<h3 id="4-4-proof-plane">4.4 Proof Plane</h3>
+<p>The Proof Plane is the assurance system: policy, controls, evidence, risk, exceptions, audit, regulatory mappings, model evaluations, software provenance and resilience test results. It is designed as a control system, not a document archive.</p>
+<h3 id="4-5-the-digital-thread">4.5 The Digital Thread</h3>
+<p>Every material object receives a stable identity and links to the objects that explain it. A mission links to services; services link to code, data, suppliers and SLOs; a change links to source, tests, policies, approvals and deployment; a control links to evidence; an incident links back to the affected service and change history.</p>
+<p>The thread is what lets a board ask “which important services depend on a supplier with an overdue recovery test?” and receive an evidence-backed answer instead of launching a spreadsheet exercise.</p>
+<hr />
+<h2 id="5-teaming-the-human-system">5. Teaming: the human system</h2>
+<h3 id="5-1-crews">5.1 Crews</h3>
+<p>A <strong>Crew</strong> is a persistent, multidisciplinary group accountable for an enduring service, platform or business capability. Typical size is 5–9 core people, adjusted for context. A Crew normally includes enough product/outcome, engineering, operations and domain capability to make day-to-day decisions without serial hand-offs.</p>
+<p>Crews own build <strong>and</strong> run. They do not throw work over a wall to operations. Where 24/7 or specialist operations require shared support, the Crew still owns service health, SLOs, runbooks and incident learning.</p>
+<h3 id="5-2-stewards">5.2 Stewards</h3>
+<p>A <strong>Steward</strong> is the accountable human for an important object or decision domain: service, platform, data domain, control family, supplier, model or mission. Stewardship is explicit and machine-readable.</p>
+<h3 id="5-3-stewardship-circles">5.3 Stewardship Circles</h3>
+<p>Security, privacy, architecture, resilience, risk, legal/compliance, finance and AI governance operate as <strong>Stewardship Circles</strong>. Their default job is not ticket approval. Their job is to:</p>
+<ul>
+<li>define policy and risk semantics;</li>
+<li>encode repeatable controls into platforms and pipelines;</li>
+<li>curate patterns and examples;</li>
+<li>advise on novel or high-risk decisions;</li>
+<li>review exceptions and systemic risk;</li>
+<li>perform or commission independent assurance where needed.</li>
+</ul>
+<p>The measure of a successful Stewardship Circle is not the number of reviews performed. It is the proportion of ordinary work that no longer needs bespoke review because the safe path is encoded.</p>
+<h3 id="5-4-guilds">5.4 Guilds</h3>
+<p><strong>Guilds</strong> are craft communities for disciplines such as platform engineering, SRE, product, data, security, architecture and AI engineering. Guilds teach, compare patterns, maintain reference implementations and create social identity across Crews. They are deliberately not hierarchy.</p>
+<h3 id="5-5-mission-swarms">5.5 Mission Swarms</h3>
+<p>A <strong>Mission Swarm</strong> is a short-lived coalition assembled when a cross-cutting objective cannot be solved within one Crew: a critical incident theme, major migration, regulatory deadline or system-wide performance problem. Swarms have a defined end condition and dissolve when it is met.</p>
+<h3 id="5-6-what-disappears">5.6 What disappears</h3>
+<p>Meridian removes or sharply reduces:</p>
+<ul>
+<li>mandatory Scrum Master roles;</li>
+<li>project managers used primarily for status collection;</li>
+<li>architecture review boards for routine decisions;</li>
+<li>security sign-off for changes already proven by automated controls;</li>
+<li>release managers for ordinary low-risk releases;</li>
+<li>standing transformation offices;</li>
+<li>story-point productivity comparison;</li>
+<li>duplicated governance packs assembled manually for different committees.</li>
+</ul>
+<p>People performing those roles are not discarded; their expertise moves toward flow engineering, coaching, platform design, control automation, portfolio judgement, supplier orchestration, resilience and AI supervision.</p>
+<hr />
+<h2 id="6-the-unit-of-work-missions-passages-and-proof">6. The unit of work: Missions, Passages and Proof</h2>
+<h3 id="6-1-mission">6.1 Mission</h3>
+<p>A Mission is a bounded outcome thesis. It contains:</p>
+<ul>
+<li>the beneficiary and problem;</li>
+<li>baseline and measurable target;</li>
+<li>expected value and cost of delay;</li>
+<li>non-negotiable harm/risk constraints;</li>
+<li>assumptions;</li>
+<li>smallest valuable Passage;</li>
+<li>evidence that would cause stop, pivot or expansion;</li>
+<li>accountable Mission Steward;</li>
+<li>impacted services and regulatory profiles.</li>
+</ul>
+<h3 id="6-2-passage">6.2 Passage</h3>
+<p>A <strong>Passage</strong> is the smallest independently valuable and observable slice of a Mission. A Passage may be software, a platform capability, a process redesign, a migration slice, a control automation, a model evaluation, a supplier change or an operational improvement.</p>
+<p>Passages replace the obsession with story granularity. The test is not “is this a good user story?” but “can this produce learning or value safely and independently?”</p>
+<h3 id="6-3-proof-bundle">6.3 Proof Bundle</h3>
+<p>Every material production change produces a <strong>Proof Bundle</strong> automatically. The bundle is not a PDF. It is a linked set of evidence objects, including as applicable:</p>
+<ul>
+<li>source revision and build provenance;</li>
+<li>test results;</li>
+<li>dependency/software bill of materials;</li>
+<li>threat/harm model changes;</li>
+<li>data classification and privacy checks;</li>
+<li>policy decisions;</li>
+<li>AI evaluations;</li>
+<li>change risk score;</li>
+<li>approvals or leased exceptions;</li>
+<li>deployment identity and timestamps;</li>
+<li>health/SLO evidence;</li>
+<li>rollback/roll-forward information;</li>
+<li>supplier or model versions;</li>
+<li>regulatory/control mappings.</li>
+</ul>
+<p>This makes compliance <strong>ambient</strong>: the evidence needed to demonstrate safe delivery is generated while delivery happens.</p>
+<hr />
+<h2 id="7-meridian-lifecycle">7. Meridian lifecycle</h2>
+<p>Meridian uses a six-state loop. Teams can move back and forth; it is not a stage-gate process.</p>
+<ol>
+<li><strong>Orient</strong> — understand outcome, user, system context, criticality, regulation and current evidence.</li>
+<li><strong>Shape</strong> — choose a small, valuable, reversible approach; define contracts and guardrails.</li>
+<li><strong>Forge</strong> — build or configure using paved roads and AI-assisted engineering.</li>
+<li><strong>Prove</strong> — run tests, policies, evaluations, security checks and resilience evidence appropriate to risk.</li>
+<li><strong>Release</strong> — expose progressively, observe outcomes and preserve traceability.</li>
+<li><strong>Learn</strong> — use telemetry, incidents, user feedback, cost and assurance gaps to alter the next decision.</li>
+</ol>
+<p>The lifecycle has no universal sprint length. Cadence follows the physics of the work.</p>
+<hr />
+<h2 id="8-ai-native-enterprise-the-second-workforce">8. AI-native enterprise: the second workforce</h2>
+<p>Meridian assumes every Crew and Stewardship Circle can be supported by specialised AI agents. The model is not one omnipotent corporate bot; it is a set of bounded agents with explicit authority, data access and evaluation.</p>
+<h3 id="8-1-typical-agent-roles">8.1 Typical agent roles</h3>
+<ul>
+<li><strong>Scout</strong> — searches internal and approved external knowledge, summarises change and finds precedents.</li>
+<li><strong>Cartographer</strong> — maps services, dependencies, data flows, regulations and architecture options.</li>
+<li><strong>Maker</strong> — drafts code, infrastructure, tests, migrations, runbooks and documentation.</li>
+<li><strong>Verifier</strong> — challenges claims, runs evaluations, checks policies and looks for missing evidence.</li>
+<li><strong>Sentinel</strong> — watches security, reliability, cost, model behaviour and supplier signals.</li>
+<li><strong>Scribe</strong> — maintains decision records, service passports and proof narratives from primary evidence.</li>
+<li><strong>Operator</strong> — performs bounded operational actions under policy.</li>
+<li><strong>Tutor</strong> — explains systems, incidents, standards and local patterns to people in context.</li>
+</ul>
+<h3 id="8-2-autonomy-ladder">8.2 Autonomy ladder</h3>
+<table>
+<thead>
+<tr>
+  <th>Level</th>
+  <th>Authority</th>
+  <th>Minimum controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A0 — Observe</td>
+  <td>AI may read approved information and summarise. No side effects.</td>
+  <td>No write tools or privileged actions. Human verifies material conclusions.</td>
+</tr>
+<tr>
+  <td>A1 — Propose</td>
+  <td>AI may draft code, decisions, messages, designs or policy changes.</td>
+  <td>Human explicitly approves before any material effect.</td>
+</tr>
+<tr>
+  <td>A2 — Sandbox</td>
+  <td>AI may execute within isolated development/test environments.</td>
+  <td>Bounded credentials, synthetic/approved data, full logs, no production authority.</td>
+</tr>
+<tr>
+  <td>A3 — Reversible production</td>
+  <td>AI may perform predefined, low-blast-radius production actions that are automatically reversible.</td>
+  <td>Policy checks, change traceability, rollback, spend/privilege ceilings and continuous monitoring.</td>
+</tr>
+<tr>
+  <td>A4 — Bounded autonomy</td>
+  <td>AI may pursue a defined operational objective inside a constrained production domain.</td>
+  <td>Independent evals, runtime policy enforcement, human accountable steward, kill switch, exception handling and periodic authority revalidation.</td>
+</tr>
+</tbody>
+</table>
+<p>Authority is granted to a <strong>task and environment</strong>, not to a model brand. A model upgrade does not inherit trust automatically.</p>
+<h3 id="8-3-the-ai-authority-principle">8.3 The AI authority principle</h3>
+<p>An AI system can be permitted to do anything that a well-governed software service can do <strong>only when its behaviour is sufficiently bounded, observable, testable and reversible for the risk involved</strong>. Where those properties are weak, human approval or narrower authority is required.</p>
+<h3 id="8-4-ai-at-each-layer">8.4 AI at each layer</h3>
+<table>
+<thead>
+<tr>
+  <th>Layer</th>
+  <th>AI-native use</th>
+  <th>Human responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board / executive</td>
+  <td>regulatory-change synthesis, scenario analysis, portfolio risk, control-health summaries</td>
+  <td>risk appetite, material decisions, challenge</td>
+</tr>
+<tr>
+  <td>Portfolio</td>
+  <td>opportunity discovery, cost-of-delay models, forecast simulation, duplicate-work detection</td>
+  <td>capital allocation and stop decisions</td>
+</tr>
+<tr>
+  <td>Product / discovery</td>
+  <td>research synthesis, prototype generation, experiment design</td>
+  <td>customer empathy, ethics, prioritisation</td>
+</tr>
+<tr>
+  <td>Architecture</td>
+  <td>option generation, dependency analysis, ADR drafting, migration simulation</td>
+  <td>trade-offs, irreversible decisions</td>
+</tr>
+<tr>
+  <td>Engineering</td>
+  <td>code/IaC generation, tests, reviews, refactors, migration tooling</td>
+  <td>intent, review, difficult design, production authority</td>
+</tr>
+<tr>
+  <td>Security</td>
+  <td>threat-model drafts, control checks, vulnerability triage, attack simulation</td>
+  <td>risk judgement, exceptions, adversarial oversight</td>
+</tr>
+<tr>
+  <td>Assurance</td>
+  <td>obligation mapping, evidence collection, test generation, audit sampling</td>
+  <td>legal interpretation and control ownership</td>
+</tr>
+<tr>
+  <td>Operations</td>
+  <td>anomaly detection, incident correlation, runbook execution, capacity actions</td>
+  <td>incident command, material business decisions</td>
+</tr>
+<tr>
+  <td>FinOps</td>
+  <td>anomaly detection, rightsizing proposals, cost forecasting</td>
+  <td>commercial choices and risk acceptance</td>
+</tr>
+<tr>
+  <td>Procurement</td>
+  <td>supplier research, contract comparison, concentration analysis</td>
+  <td>negotiation, legal acceptance, strategic supplier decisions</td>
+</tr>
+<tr>
+  <td>People</td>
+  <td>contextual onboarding, skill coaching, knowledge retrieval</td>
+  <td>management, mentoring, performance judgement</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-work-product-standard">9. Work-product standard</h2>
+<p>Meridian minimises narrative documents that go stale. Core work products are concise, structured and linked to evidence.</p>
+<h3 id="9-1-mandatory-work-products">9.1 Mandatory work products</h3>
+<ol>
+<li><strong>Service Passport</strong> — the living identity card for a service or platform.</li>
+<li><strong>Mission Brief</strong> — outcome thesis, guardrails and stop conditions.</li>
+<li><strong>Decision Record</strong> — material architecture, risk or product decision and rationale.</li>
+<li><strong>Threat &amp; Harm Model</strong> — security abuse cases plus broader user/business harms where relevant.</li>
+<li><strong>Data Map</strong> — important data categories, purpose, lineage, residency, retention and access.</li>
+<li><strong>Control Contract</strong> — applicable machine-testable and human controls for a mission/change.</li>
+<li><strong>Proof Bundle</strong> — evidence generated by a change or control cycle.</li>
+<li><strong>Runbook</strong> — operational response/recovery knowledge; executable where practical.</li>
+<li><strong>Incident Record</strong> — timeline, impact, actions, communications and learning.</li>
+<li><strong>AI System Card</strong> — model/system purpose, risk, evals, authority, data, limitations and owners.</li>
+<li><strong>Supplier Passport</strong> — dependency, data, risk, assurance, concentration and exit information.</li>
+<li><strong>Exception Lease</strong> — temporary deviation, owner, rationale, compensating controls and expiry.</li>
+</ol>
+<h3 id="9-2-machine-readable-service-passport">9.2 Machine-readable service passport</h3>
+<p>A conformant implementation should support a repository-level manifest such as:</p>
+<pre><code class="language-yaml">apiVersion: meridian/v0.1
+kind: ServicePassport
+metadata:
+  name: payments-ledger
+  steward: payments-platform
+spec:
+  purpose: Record and reconcile customer payment movements
+  criticality: C4
+  profiles: [BASE, UK-DATA, EU-DORA, UK-FS]
+  dataClasses: [confidential, restricted-personal]
+  slo:
+    availability: 99.95%
+    latencyP95Ms: 300
+  resilience:
+    impactTolerance: 2h
+    rto: 30m
+    rpo: 5m
+  interfaces:
+    - type: api
+      contract: openapi/payments-ledger.yaml
+  evidence:
+    controlGraphId: svc:payments-ledger
+  ai:
+    autonomyMax: A2
+</code></pre>
+<p>The exact schema may vary, but the semantics should be stable and exportable.</p>
+<hr />
+<h2 id="10-ceremonies-and-exercises-practices-worth-attending">10. Ceremonies and exercises: practices worth attending</h2>
+<p>Meridian has no mandatory daily stand-up, sprint planning or quarterly programme increment. It provides a library of <strong>high-energy practices</strong> triggered by need.</p>
+<table>
+<thead>
+<tr>
+  <th>Practice</th>
+  <th>Trigger</th>
+  <th>How it works</th>
+  <th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Signal Sweep</td>
+  <td>Daily / async-first</td>
+  <td>AI assembles overnight changes, blocked work, SLO movement, cost anomalies, security findings and decisions due. Humans meet for 10 minutes only if exceptions need conversation.</td>
+  <td>A prioritised exception list; no round-robin status.</td>
+</tr>
+<tr>
+  <td>Mission Forge</td>
+  <td>At mission start</td>
+  <td>A facilitated 60–90 minute session with customers, delivery, risk and operations to define the outcome, baseline, target, harm limits, assumptions and smallest valuable passage.</td>
+  <td>Versioned Mission Brief.</td>
+</tr>
+<tr>
+  <td>Guardrail Jam</td>
+  <td>When shaping material work</td>
+  <td>Security, privacy, architecture, operations and legal/compliance convert constraints into tests, paved-road choices and explicit exceptions before build work expands.</td>
+  <td>Control Contract + executable checks.</td>
+</tr>
+<tr>
+  <td>Black Sky</td>
+  <td>Before consequential release; quarterly for critical services</td>
+  <td>A pre-mortem: assume the change or service caused severe harm. Work backwards through plausible technical, human, supplier and AI failure chains.</td>
+  <td>Top failure paths + mitigations + test scenarios.</td>
+</tr>
+<tr>
+  <td>Show the Thing</td>
+  <td>Weekly or on meaningful change</td>
+  <td>Demonstrate running software, service behaviour, prototypes, recovery, metrics or user outcomes—not slideware. Stakeholders respond to evidence.</td>
+  <td>Feedback and decisions captured against the digital thread.</td>
+</tr>
+<tr>
+  <td>Proof Jam</td>
+  <td>Before high-risk release / monthly</td>
+  <td>Review missing or weak assurance evidence across the control graph. Humans resolve semantic ambiguity; machines gather and verify repeatable evidence.</td>
+  <td>Closed evidence gaps or explicit leased exceptions.</td>
+</tr>
+<tr>
+  <td>Chaos Carnival</td>
+  <td>Monthly/quarterly by criticality</td>
+  <td>Game-day exercises that break dependencies, expire credentials, remove regions, corrupt inputs, simulate supplier outage or constrain AI tools in a psychologically safe format.</td>
+  <td>Measured recovery performance and resilience improvements.</td>
+</tr>
+<tr>
+  <td>Regulator Replay</td>
+  <td>Monthly sample</td>
+  <td>Randomly select a material change or decision and reconstruct what happened, what obligations applied, who authorised it and what evidence existed at the time.</td>
+  <td>Audit-readiness score and evidence-system defects.</td>
+</tr>
+<tr>
+  <td>Afterburn</td>
+  <td>After incidents and major missions</td>
+  <td>A blameless learning session focused on system conditions, surprises, useful adaptations and concrete changes to guardrails or platforms.</td>
+  <td>A small set of owned system improvements.</td>
+</tr>
+<tr>
+  <td>Mission Market</td>
+  <td>Quarterly</td>
+  <td>Leaders and crews review evidence of value, risk and capacity, then stop, continue or redirect missions and funding. Teams pitch live outcomes and constraints, not status decks.</td>
+  <td>Rebalanced mission portfolio and explicit stop decisions.</td>
+</tr>
+<tr>
+  <td>Dependency Rendezvous</td>
+  <td>As needed</td>
+  <td>Two or more crews resolve a shared interface or sequencing problem by creating a versioned dependency contract with testable expectations.</td>
+  <td>An API/data/platform/decision contract and owner.</td>
+</tr>
+<tr>
+  <td>Craft Studio</td>
+  <td>Fortnightly/monthly</td>
+  <td>Guild-led learning through live problem solving: incident dissections, architecture clinics, AI eval challenges, threat-model games, code reading or platform demos.</td>
+  <td>Reusable patterns and improved craft, not attendance credit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-1-facilitation-rules">10.1 Facilitation rules</h3>
+<p>Every synchronous practice should:</p>
+<ul>
+<li>have a visible question to answer;</li>
+<li>work from real artefacts, telemetry or prototypes;</li>
+<li>minimise spectator attendance;</li>
+<li>create a decision, experiment, relationship or reusable work product;</li>
+<li>use AI beforehand to remove status recital and after the session to capture actions/evidence;</li>
+<li>end early when the purpose is achieved.</li>
+</ul>
+<p>A meeting that exists to transfer information that a machine could have assembled is a design smell.</p>
+<hr />
+<h2 id="11-the-control-graph-and-assurance-compiler">11. The Control Graph and Assurance Compiler</h2>
+<h3 id="11-1-control-graph">11.1 Control Graph</h3>
+<p>The Control Graph is Meridian's central technical innovation. Its core node types are:</p>
+<p><strong>Obligation → Policy → Control → Service → Asset → Identity → Supplier → Change → Evidence → Risk → Incident → Decision → Owner</strong></p>
+<p>Edges express relationships such as “implements”, “depends on”, “proves”, “changed by”, “violates”, “owned by”, “affected”, “supplied by” and “derived from”.</p>
+<h3 id="11-2-assurance-compiler">11.2 Assurance Compiler</h3>
+<p>The <strong>Assurance Compiler</strong> transforms human-readable obligations and enterprise policy into a mix of:</p>
+<ul>
+<li>policy-as-code;</li>
+<li>CI/CD checks;</li>
+<li>cloud/runtime configuration tests;</li>
+<li>identity controls;</li>
+<li>data tests;</li>
+<li>AI evaluations;</li>
+<li>resilience exercises;</li>
+<li>evidence queries;</li>
+<li>human attestations only where judgement is genuinely required.</li>
+</ul>
+<p>Legal interpretation is never silently delegated to a model. AI may suggest mappings; an authorised legal/compliance/control owner validates material interpretations. Once validated, the mapping becomes reusable.</p>
+<h3 id="11-3-evidence-reuse">11.3 Evidence reuse</h3>
+<p>One trustworthy fact should satisfy every obligation for which it is actually probative. For example, a tested restore event may support internal policy, resilience standards and multiple regulatory requirements. Meridian explicitly rejects “one screenshot per framework” duplication.</p>
+<hr />
+<h2 id="12-risk-model">12. Risk model</h2>
+<h3 id="12-1-service-criticality">12.1 Service criticality</h3>
+<ul>
+<li><strong>C0 — Experimental:</strong> no production dependency or material customer impact.</li>
+<li><strong>C1 — Supporting:</strong> limited internal impact; easy manual workaround.</li>
+<li><strong>C2 — Business:</strong> meaningful customer or operational impact; bounded workaround.</li>
+<li><strong>C3 — Critical:</strong> major financial, customer, legal or operational harm if unavailable or corrupted.</li>
+<li><strong>C4 — Systemic/Safety:</strong> severe harm, market impact, safety impact, essential service or board-defined systemic importance.</li>
+</ul>
+<p>Criticality determines minimum recovery testing, independent assurance, change controls, telemetry and supplier scrutiny.</p>
+<h3 id="12-2-change-risk">12.2 Change risk</h3>
+<p>Every material change is automatically scored using:</p>
+<ul>
+<li>affected service criticality;</li>
+<li>blast radius;</li>
+<li>reversibility;</li>
+<li>novelty;</li>
+<li>privilege;</li>
+<li>data sensitivity;</li>
+<li>external exposure;</li>
+<li>supplier/model change;</li>
+<li>migration complexity;</li>
+<li>evidence completeness;</li>
+<li>recent service health.</li>
+</ul>
+<p>The score selects the Proof Bundle and release pattern. Low-risk, fully proven changes can flow without human approval. High-risk or poorly reversible changes receive increased challenge, simulation, independent review or staged exposure.</p>
+<h3 id="12-3-ai-risk-and-authority-are-separate">12.3 AI risk and authority are separate</h3>
+<p>AI <strong>impact risk</strong> and AI <strong>operational authority</strong> are distinct dimensions. A high-impact employment decision model might have low operational tool authority but high legal/fundamental-rights risk. An infrastructure remediation agent may have high tool authority but narrow decision impact. Both need different controls.</p>
+<h3 id="12-4-exceptions">12.4 Exceptions</h3>
+<p>Risk acceptance is a first-class object, not an email. Exceptions have:</p>
+<ul>
+<li>scope;</li>
+<li>reason;</li>
+<li>risk statement;</li>
+<li>affected obligations;</li>
+<li>compensating controls;</li>
+<li>accountable owner;</li>
+<li>expiry;</li>
+<li>review trigger;</li>
+<li>telemetry indicating whether risk is changing.</li>
+</ul>
+<hr />
+<h2 id="13-regulatory-architecture">13. Regulatory architecture</h2>
+<h3 id="13-1-a-truthful-answer-to-all-applicable-regulation">13.1 A truthful answer to “all applicable regulation”</h3>
+<p>No universal technology framework can truthfully pre-list every law that applies to every organisation. Applicability changes with jurisdiction, sector, data, legal entity, customer, listing venue, contract, technology and business activity. Meridian therefore makes <strong>applicability management itself a normative control</strong>.</p>
+<p>The Base profile is always active. Additional profiles are activated by a legal/compliance-owned applicability assessment. Profiles map Meridian evidence to external obligations without copying copyrighted standards or pretending that a mapping is legal advice.</p>
+<h3 id="13-2-reference-profiles">13.2 Reference profiles</h3>
+<table>
+<thead>
+<tr>
+  <th>Profile</th>
+  <th>Purpose</th>
+  <th>Primary sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>BASE</td>
+  <td>Applies to all in-scope enterprise technology.</td>
+  <td>ISO/IEC 27001; ISO/IEC 20000-1; ISO 22301; NIST CSF 2.0; NIST SSDF</td>
+</tr>
+<tr>
+  <td>UK-DATA</td>
+  <td>Activate for UK GDPR / Data Protection Act / DUAA-regulated personal data processing.</td>
+  <td>UK GDPR; Data Protection Act 2018; Data (Use and Access) Act 2025; ICO accountability and privacy-by-design guidance</td>
+</tr>
+<tr>
+  <td>EU-DATA</td>
+  <td>Activate for EU GDPR-regulated processing.</td>
+  <td>EU GDPR</td>
+</tr>
+<tr>
+  <td>EU-AI</td>
+  <td>Activate for AI systems or GPAI within EU AI Act territorial/material scope.</td>
+  <td>Regulation (EU) 2024/1689 and amendments; European Commission AI Act guidance</td>
+</tr>
+<tr>
+  <td>EU-NIS2</td>
+  <td>Activate for essential/important entities in Member States transposing NIS2.</td>
+  <td>Directive (EU) 2022/2555 and national transposition</td>
+</tr>
+<tr>
+  <td>EU-DORA</td>
+  <td>Activate for financial entities within DORA scope and relevant ICT third-party arrangements.</td>
+  <td>Regulation (EU) 2022/2554; DORA delegated/implementing acts</td>
+</tr>
+<tr>
+  <td>UK-FS</td>
+  <td>Activate for firms within FCA/PRA operational-resilience rules and related supervisory expectations.</td>
+  <td>FCA PS21/3; PRA PS6/21 / SS1/21; UK financial-services requirements as applicable</td>
+</tr>
+<tr>
+  <td>UK-NIS</td>
+  <td>Activate for operators/digital providers under current UK NIS rules and track the Cyber Security and Resilience Bill as it progresses.</td>
+  <td>Network and Information Systems Regulations 2018; NCSC CAF; Cyber Security and Resilience Bill when/if enacted</td>
+</tr>
+<tr>
+  <td>PAY</td>
+  <td>Activate for environments handling account/cardholder data within PCI DSS scope.</td>
+  <td>PCI DSS v4.0.1</td>
+</tr>
+<tr>
+  <td>US-PUBLIC</td>
+  <td>Activate for SEC registrants subject to cyber incident and governance disclosure requirements.</td>
+  <td>SEC cybersecurity risk management, strategy, governance and incident disclosure rules</td>
+</tr>
+<tr>
+  <td>US-HEALTH</td>
+  <td>Activate for HIPAA covered entities/business associates handling ePHI.</td>
+  <td>HIPAA Security Rule; HITECH Act</td>
+</tr>
+<tr>
+  <td>AU-APRA</td>
+  <td>Activate for APRA-regulated entities.</td>
+  <td>CPS 230 Operational Risk Management; CPS 234 Information Security</td>
+</tr>
+<tr>
+  <td>CA-OSFI</td>
+  <td>Activate for federally regulated financial institutions subject to OSFI B-13 and related guidance.</td>
+  <td>OSFI Guideline B-13; OSFI third-party/operational-risk guidance as applicable</td>
+</tr>
+<tr>
+  <td>SG-MAS</td>
+  <td>Activate for financial institutions subject to applicable MAS technology-risk notices/guidelines.</td>
+  <td>MAS Technology Risk Management Guidelines and applicable Notices</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-3-current-regulatory-design-implications">13.3 Current regulatory design implications</h3>
+<p>As of this draft:</p>
+<ul>
+<li><strong>DORA</strong> requires in-scope financial entities to maintain an internal governance and control framework for ICT risk, places responsibility on the management body, and requires a comprehensive, documented ICT risk-management framework plus continuity, response/recovery and testing. Meridian maps these to board accountability, Service Passports, Control Graph evidence, impact tolerances and recovery exercises.</li>
+<li><strong>NIS2</strong> requires management bodies of essential and important entities to approve and oversee cybersecurity risk-management measures and receive training, with national transposition determining detailed legal applicability. Meridian maps this to governance, role-appropriate literacy, supplier security and evidence-backed cyber controls.</li>
+<li><strong>UK GDPR / DPA / DUAA</strong> emphasise accountability, technical and organisational measures, privacy by design/default, records, security and specific safeguards around significant automated decisions. Meridian maps these to Data Maps, privacy-by-design, AI System Cards, data minimisation, evidence and human-intervention controls.</li>
+<li><strong>EU AI Act</strong> is now partly in application, including transparency requirements from 2 August 2026; high-risk implementation dates have been amended/extended. Meridian therefore treats AI applicability/timeline data as live regulatory metadata rather than hard-coded assumptions.</li>
+<li><strong>FCA/PRA operational resilience</strong> expects in-scope firms to identify important business services, set impact tolerances and be able to remain within them. Meridian makes the business service and impact tolerance first-class objects.</li>
+<li><strong>UK cyber reform</strong> remains a moving target while the Cyber Security and Resilience Bill progresses. Meridian can hold a proposed/pending obligation state without treating it as enacted law.</li>
+<li><strong>APRA CPS 230/CPS 234</strong>, <strong>OSFI B-13</strong> and <strong>MAS technology-risk requirements</strong> reinforce the same durable themes: board/senior accountability, critical service or system identification, security capability, operational resilience, supplier dependency and evidence.</li>
+</ul>
+<h3 id="13-4-standards-alignment">13.4 Standards alignment</h3>
+<p>Meridian is designed to complement, not replace, management-system and technical standards. A conformant implementation should be able to map its evidence to adopted standards such as ISO/IEC 27001, ISO/IEC 20000-1, ISO 22301, ISO/IEC 42001, NIST CSF 2.0, NIST SSDF and PCI DSS where applicable.</p>
+<hr />
+<h2 id="14-normative-requirements">14. Normative requirements</h2>
+<p>The following clauses form the current normative core. An enterprise may add stricter controls but should not silently weaken these clauses while claiming full conformance.</p>
+<h3 id="governance">Governance</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-GOV-001</td>
+  <td>Board accountability</td>
+  <td>The governing body shall define technology risk appetite, approve critical technology policies, and retain ultimate accountability for technology, cyber, data and AI risk.</td>
+</tr>
+<tr>
+  <td>MER-GOV-002</td>
+  <td>Decision rights</td>
+  <td>Each material technology service, product, platform, data domain and AI system shall have one named accountable steward with explicit decision rights.</td>
+</tr>
+<tr>
+  <td>MER-GOV-003</td>
+  <td>Live control graph</td>
+  <td>The organisation shall maintain a traceable graph linking obligations, policies, controls, services, assets, suppliers, changes, evidence, risks, incidents and accountable owners.</td>
+</tr>
+<tr>
+  <td>MER-GOV-004</td>
+  <td>Exceptions as leases</td>
+  <td>Departures from mandatory controls shall be time-bounded, risk-assessed, approved by an authorised risk owner, linked to compensating controls, and automatically expire unless renewed.</td>
+</tr>
+<tr>
+  <td>MER-GOV-005</td>
+  <td>Policy as executable intent</td>
+  <td>Where a requirement is objectively testable, the organisation shall express it as machine-testable policy or automated evidence collection rather than rely only on manual review.</td>
+</tr>
+<tr>
+  <td>MER-GOV-006</td>
+  <td>Independent assurance</td>
+  <td>Control design and operating effectiveness for material risks shall be subject to proportionate independent assurance, with independence increasing with service criticality.</td>
+</tr>
+<tr>
+  <td>MER-GOV-007</td>
+  <td>Regulatory inventory</td>
+  <td>The organisation shall maintain a current inventory of applicable laws, regulations, contractual obligations and adopted standards, including jurisdiction, scope, effective date and accountable legal or compliance owner.</td>
+</tr>
+<tr>
+  <td>MER-GOV-008</td>
+  <td>No metric gaming</td>
+  <td>Technology performance measures shall assess systems, services and outcomes; individual productivity rankings based on tickets, commits, story points or lines of code are prohibited.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outcomes">Outcomes</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-OUT-001</td>
+  <td>Mission definition</td>
+  <td>Material work shall start with a measurable mission outcome, beneficiary, baseline, target, guardrails, expected value, maximum acceptable harm and intended review date.</td>
+</tr>
+<tr>
+  <td>MER-OUT-002</td>
+  <td>Outcome economics</td>
+  <td>Mission selection shall consider expected value, cost of delay, risk reduction, strategic fit, reversibility and opportunity cost.</td>
+</tr>
+<tr>
+  <td>MER-OUT-003</td>
+  <td>Smallest valuable passage</td>
+  <td>Teams shall seek the smallest independently valuable and observable change that can test an assumption or improve an outcome.</td>
+</tr>
+<tr>
+  <td>MER-OUT-004</td>
+  <td>Stop rules</td>
+  <td>Every mission shall define evidence that would cause the work to stop, pivot, narrow or expand.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flow">Flow</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-FLW-001</td>
+  <td>Pull over push</td>
+  <td>Persistent teams shall pull work within explicit work-in-progress limits rather than accept unbounded concurrent commitments.</td>
+</tr>
+<tr>
+  <td>MER-FLW-002</td>
+  <td>Forecast from flow</td>
+  <td>Delivery forecasts shall use historical cycle-time distributions, dependency evidence and confidence ranges rather than story-point conversion to dates.</td>
+</tr>
+<tr>
+  <td>MER-FLW-003</td>
+  <td>Async default</td>
+  <td>Routine status, coordination and evidence gathering shall be asynchronous by default; synchronous meetings shall exist only for decisions, creativity, conflict resolution, learning or relationship-building.</td>
+</tr>
+<tr>
+  <td>MER-FLW-004</td>
+  <td>Meeting expiry</td>
+  <td>Recurring meetings shall declare an owner, purpose, expected output, maximum duration and review/expiry date.</td>
+</tr>
+<tr>
+  <td>MER-FLW-005</td>
+  <td>Blocked-work escalation</td>
+  <td>Blocked work affecting a critical path or critical service shall be surfaced automatically and escalated by elapsed risk, not by hierarchy.</td>
+</tr>
+<tr>
+  <td>MER-FLW-006</td>
+  <td>Dependency contracts</td>
+  <td>Cross-team dependencies shall be expressed as versioned service, API, data, platform or decision contracts with explicit expectations rather than informal hand-offs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="architecture">Architecture</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-ARC-001</td>
+  <td>Composable boundaries</td>
+  <td>Systems shall be decomposed around stable business or platform capabilities with explicit interfaces and ownership boundaries appropriate to their change rate and risk.</td>
+</tr>
+<tr>
+  <td>MER-ARC-002</td>
+  <td>Open interfaces</td>
+  <td>Material integration points shall use documented, versioned interfaces and data contracts designed for testability, observability and controlled evolution.</td>
+</tr>
+<tr>
+  <td>MER-ARC-003</td>
+  <td>Reversibility</td>
+  <td>Architectural decisions shall state their reversibility. Irreversible or high-lock-in decisions require proportionately stronger evidence and senior review.</td>
+</tr>
+<tr>
+  <td>MER-ARC-004</td>
+  <td>Platform reuse</td>
+  <td>Common capabilities shall be provided as paved-road platform products where repeated local implementation would increase risk, cost or cognitive load.</td>
+</tr>
+<tr>
+  <td>MER-ARC-005</td>
+  <td>Architecture records</td>
+  <td>Material architecture decisions shall be captured as concise, version-controlled decision records linked to assumptions, alternatives, risks and evidence.</td>
+</tr>
+<tr>
+  <td>MER-ARC-006</td>
+  <td>Observed inventory</td>
+  <td>The authoritative technology inventory shall be reconciled continuously against observed infrastructure, identities, software and cloud resources; unobserved manual CMDB records alone are insufficient.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security">Security</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-SEC-001</td>
+  <td>Secure by default</td>
+  <td>Security controls shall be embedded in default platforms, templates, pipelines and runtime configurations so the safe path is easier than the unsafe path.</td>
+</tr>
+<tr>
+  <td>MER-SEC-002</td>
+  <td>Least privilege</td>
+  <td>Human and machine identities shall receive the minimum privileges required, for the minimum time required, with privileged activity strongly authenticated and logged.</td>
+</tr>
+<tr>
+  <td>MER-SEC-003</td>
+  <td>Threat modelling</td>
+  <td>Material changes shall include threat and abuse-case analysis proportionate to data sensitivity, exposure, privilege, novelty and blast radius.</td>
+</tr>
+<tr>
+  <td>MER-SEC-004</td>
+  <td>Software supply chain</td>
+  <td>Software delivery shall maintain provenance for source, dependencies and build outputs, perform proportionate vulnerability and integrity checks, and support rapid component identification and remediation.</td>
+</tr>
+<tr>
+  <td>MER-SEC-005</td>
+  <td>Vulnerability risk</td>
+  <td>Vulnerabilities shall be prioritised using exploitability, exposure, business impact and compensating controls, with remediation targets based on risk rather than severity score alone.</td>
+</tr>
+<tr>
+  <td>MER-SEC-006</td>
+  <td>Cryptography</td>
+  <td>Sensitive data shall be protected in transit and at rest using current, approved cryptography with managed keys, rotation, access controls and migration plans for deprecated algorithms.</td>
+</tr>
+<tr>
+  <td>MER-SEC-007</td>
+  <td>Secrets</td>
+  <td>Secrets shall not be stored in source code or unprotected work systems; machine-managed secret issuance, rotation and revocation shall be used for material systems.</td>
+</tr>
+<tr>
+  <td>MER-SEC-008</td>
+  <td>Security telemetry</td>
+  <td>Security-relevant events shall be captured, time-synchronised, protected from tampering and retained according to risk, legal and investigative requirements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-privacy">Data &amp; Privacy</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-DAT-001</td>
+  <td>Data inventory</td>
+  <td>Material data sets and flows shall have defined owners, classification, purpose, source, recipients, retention and lineage.</td>
+</tr>
+<tr>
+  <td>MER-DAT-002</td>
+  <td>Data minimisation</td>
+  <td>Personal and sensitive data collection, access, processing and retention shall be limited to what is necessary for a defined purpose.</td>
+</tr>
+<tr>
+  <td>MER-DAT-003</td>
+  <td>Privacy by design</td>
+  <td>Products and services processing personal data shall consider privacy from initial design through decommissioning, and high-risk processing shall trigger a documented privacy impact assessment where legally required.</td>
+</tr>
+<tr>
+  <td>MER-DAT-004</td>
+  <td>Data subject safeguards</td>
+  <td>Where automated processing materially affects individuals, required information, challenge, representation and human-intervention safeguards shall be implemented according to applicable law.</td>
+</tr>
+<tr>
+  <td>MER-DAT-005</td>
+  <td>Data quality</td>
+  <td>Data used for material decisions, regulatory reporting or consequential AI shall have defined quality expectations, validation, provenance and correction mechanisms.</td>
+</tr>
+<tr>
+  <td>MER-DAT-006</td>
+  <td>Retention and deletion</td>
+  <td>Data shall have enforceable retention and disposal rules, including legal holds, backup handling and verified deletion where required.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resilience">Resilience</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-REL-001</td>
+  <td>Service criticality</td>
+  <td>Every material service shall have a criticality classification based on harm from disruption, including customer, safety, financial, market, legal and systemic impact.</td>
+</tr>
+<tr>
+  <td>MER-REL-002</td>
+  <td>Impact tolerance</td>
+  <td>Critical services shall define maximum tolerable disruption and supporting recovery objectives in business terms, then map dependencies needed to remain within them.</td>
+</tr>
+<tr>
+  <td>MER-REL-003</td>
+  <td>SLOs</td>
+  <td>User-facing and enabling services shall define service-level objectives or equivalent measurable reliability targets appropriate to criticality.</td>
+</tr>
+<tr>
+  <td>MER-REL-004</td>
+  <td>Recovery by test</td>
+  <td>Recovery capability shall be demonstrated through scheduled restoration, failover or continuity exercises; untested recovery documentation is not sufficient evidence.</td>
+</tr>
+<tr>
+  <td>MER-REL-005</td>
+  <td>Progressive change</td>
+  <td>Production change shall use automated testing and, where appropriate, progressive exposure, health checks, rollback or roll-forward mechanisms to limit blast radius.</td>
+</tr>
+<tr>
+  <td>MER-REL-006</td>
+  <td>Capacity and saturation</td>
+  <td>Critical services shall monitor capacity, dependency saturation and failure modes with enough headroom or elasticity to meet defined tolerances.</td>
+</tr>
+<tr>
+  <td>MER-REL-007</td>
+  <td>Incident command</td>
+  <td>Material incidents shall use a clear incident command model separating technical coordination, business decision-making, communications and evidence capture.</td>
+</tr>
+<tr>
+  <td>MER-REL-008</td>
+  <td>Learning without blame</td>
+  <td>Post-incident learning shall focus on system conditions, incentives, controls and recovery opportunities rather than individual blame, while preserving accountability for misconduct.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="third-parties">Third Parties</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-SUP-001</td>
+  <td>Supplier inventory</td>
+  <td>Technology and data suppliers shall be inventoried with service dependency, data access, concentration, substitutability, location and exit characteristics.</td>
+</tr>
+<tr>
+  <td>MER-SUP-002</td>
+  <td>Critical supplier assessment</td>
+  <td>Suppliers supporting critical services or sensitive processing shall undergo proportionate pre-contract and ongoing assessment, including security, resilience, financial, legal, AI and sub-supplier risks.</td>
+</tr>
+<tr>
+  <td>MER-SUP-003</td>
+  <td>Contract controls</td>
+  <td>Material supplier contracts shall contain applicable security, privacy, audit, incident, continuity, data location, subcontracting, portability, exit and regulatory-access terms.</td>
+</tr>
+<tr>
+  <td>MER-SUP-004</td>
+  <td>Exit tested</td>
+  <td>Critical third-party arrangements shall have credible exit, substitution or continuity strategies tested at a frequency proportional to concentration and switching difficulty.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ai">AI</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-AI-001</td>
+  <td>AI inventory</td>
+  <td>All material AI systems and general-purpose AI dependencies shall be registered with purpose, owner, provider/model, version, data classes, users, autonomy level, risk class and jurisdictions.</td>
+</tr>
+<tr>
+  <td>MER-AI-002</td>
+  <td>Human accountability</td>
+  <td>A human or governing body shall remain accountable for decisions delegated to or supported by AI; AI output shall not be treated as an accountable approval.</td>
+</tr>
+<tr>
+  <td>MER-AI-003</td>
+  <td>Autonomy classification</td>
+  <td>AI agents shall operate under an explicit autonomy level defining permitted actions, environments, approval requirements, spend/privilege limits and emergency stop conditions.</td>
+</tr>
+<tr>
+  <td>MER-AI-004</td>
+  <td>Evaluation before authority</td>
+  <td>Before AI receives production authority, it shall pass task-specific evaluations covering correctness, safety, security, privacy, bias or fairness where relevant, robustness and failure handling.</td>
+</tr>
+<tr>
+  <td>MER-AI-005</td>
+  <td>Prompt and model provenance</td>
+  <td>Material AI behaviour shall be reproducible enough for investigation through versioned prompts/instructions, model/provider identity, retrieval sources, tool permissions and relevant configuration.</td>
+</tr>
+<tr>
+  <td>MER-AI-006</td>
+  <td>AI transparency</td>
+  <td>Users and affected persons shall receive legally required notice when interacting with or being materially affected by AI, and machine-generated content shall be identified where required.</td>
+</tr>
+<tr>
+  <td>MER-AI-007</td>
+  <td>AI data controls</td>
+  <td>Sensitive or regulated data shall not be disclosed to AI models, tools or providers unless the use is authorised, contractually governed and technically controlled for the intended purpose.</td>
+</tr>
+<tr>
+  <td>MER-AI-008</td>
+  <td>Agent least agency</td>
+  <td>AI agents shall receive the minimum tools, data, credentials, network reach, runtime duration and financial authority required for the task.</td>
+</tr>
+<tr>
+  <td>MER-AI-009</td>
+  <td>Agent evidence</td>
+  <td>Material agent actions shall produce tamper-evident logs sufficient to reconstruct intent, inputs, tool calls, changes, approvals and outcomes.</td>
+</tr>
+<tr>
+  <td>MER-AI-010</td>
+  <td>AI fallback</td>
+  <td>Consequential AI-enabled processes shall define human override, degraded-mode operation and safe shutdown or rollback paths.</td>
+</tr>
+<tr>
+  <td>MER-AI-011</td>
+  <td>AI change management</td>
+  <td>Material model, prompt, retrieval, tool or policy changes shall be risk-classified, evaluated and released through the same evidence-bearing change system as software.</td>
+</tr>
+<tr>
+  <td>MER-AI-012</td>
+  <td>AI incident response</td>
+  <td>The incident process shall explicitly cover harmful, deceptive, unsafe, privacy-impacting or uncontrolled AI behaviour, including provider/model compromise and prompt/tool abuse.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operations">Operations</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-OPS-001</td>
+  <td>Service passport</td>
+  <td>Every material service shall maintain a machine-readable service passport containing ownership, purpose, criticality, interfaces, dependencies, data classes, SLOs, recovery targets, runbooks and regulatory profiles.</td>
+</tr>
+<tr>
+  <td>MER-OPS-002</td>
+  <td>Observability</td>
+  <td>Material services shall emit telemetry sufficient to understand user experience, system health, dependencies, security signals and business outcomes.</td>
+</tr>
+<tr>
+  <td>MER-OPS-003</td>
+  <td>Runbooks as executable knowledge</td>
+  <td>Frequent or critical operational procedures shall be automated or expressed as executable, tested runbooks where practical.</td>
+</tr>
+<tr>
+  <td>MER-OPS-004</td>
+  <td>Toil budget</td>
+  <td>Teams shall measure repetitive manual operational toil and maintain an explicit improvement backlog when toil exceeds their locally defined threshold.</td>
+</tr>
+<tr>
+  <td>MER-OPS-005</td>
+  <td>Change traceability</td>
+  <td>Production changes shall be attributable to an identity, source revision, build, approval/policy decision, deployment event and resulting health evidence.</td>
+</tr>
+<tr>
+  <td>MER-OPS-006</td>
+  <td>End-of-life</td>
+  <td>Technology assets, services, models and dependencies shall have lifecycle status and planned treatment for unsupported or obsolete components.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="people">People</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-PPL-001</td>
+  <td>Persistent crews</td>
+  <td>Core delivery ownership shall sit with persistent, multidisciplinary crews aligned to enduring services or capabilities rather than temporary project teams wherever practical.</td>
+</tr>
+<tr>
+  <td>MER-PPL-002</td>
+  <td>Craft communities</td>
+  <td>Professional disciplines shall maintain communities of practice that curate patterns, coach peers and improve shared standards without becoming approval bottlenecks.</td>
+</tr>
+<tr>
+  <td>MER-PPL-003</td>
+  <td>AI literacy</td>
+  <td>People who develop, procure, govern or use AI shall receive role-appropriate training in capabilities, limitations, risk, verification, security, privacy and acceptable use.</td>
+</tr>
+<tr>
+  <td>MER-PPL-004</td>
+  <td>Psychological safety</td>
+  <td>Operating practices shall make it safe to surface uncertainty, defects, incidents and risk early; incentives that reward concealment or late escalation are non-conformant.</td>
+</tr>
+<tr>
+  <td>MER-PPL-005</td>
+  <td>Sustainable focus</td>
+  <td>Teams shall protect focus time, limit unmanaged work in progress, design on-call sustainably and track cognitive load and recurring friction as operational risks.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="economics">Economics</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-FIN-001</td>
+  <td>Unit economics</td>
+  <td>Material platforms and services shall understand meaningful unit-cost drivers and allocate technology cost in a way that supports responsible product and architecture decisions.</td>
+</tr>
+<tr>
+  <td>MER-FIN-002</td>
+  <td>FinOps feedback</td>
+  <td>Cloud and consumption-based technology shall have automated cost visibility, anomaly detection, budget guardrails and regular rightsizing or commitment review.</td>
+</tr>
+<tr>
+  <td>MER-FIN-003</td>
+  <td>Value realisation</td>
+  <td>Significant investments shall be reviewed against expected outcomes and total cost after delivery; funding shall be reallocated when evidence no longer supports the thesis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evidence">Evidence</h3>
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Requirement</th>
+  <th>Normative clause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MER-EVD-001</td>
+  <td>Proof bundle</td>
+  <td>Every material production change shall generate a linked proof bundle containing the evidence required by its risk class and applicable profiles.</td>
+</tr>
+<tr>
+  <td>MER-EVD-002</td>
+  <td>Evidence freshness</td>
+  <td>Controls relying on evidence shall define freshness expectations; stale evidence shall automatically reduce assurance status.</td>
+</tr>
+<tr>
+  <td>MER-EVD-003</td>
+  <td>Immutable audit trail</td>
+  <td>Evidence required for material regulatory, security or financial assertions shall be protected against unauthorised modification and retained according to policy and law.</td>
+</tr>
+<tr>
+  <td>MER-EVD-004</td>
+  <td>Single fact, many obligations</td>
+  <td>The assurance system shall reuse one trustworthy item of evidence across multiple mapped obligations where it proves the same control outcome.</td>
+</tr>
+<tr>
+  <td>MER-EVD-005</td>
+  <td>Regulator replay</td>
+  <td>The organisation shall be able to reconstruct, from retained evidence, why a material decision or change was allowed and how required controls were satisfied at that time.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="15-productivity-system">15. Productivity system</h2>
+<h3 id="15-1-what-meridian-does-not-use-as-productivity-measures">15.1 What Meridian does not use as productivity measures</h3>
+<p>The following shall not be used to rank individual knowledge-worker productivity:</p>
+<ul>
+<li>story points completed;</li>
+<li>tickets closed;</li>
+<li>lines of code;</li>
+<li>commit count;</li>
+<li>hours online;</li>
+<li>AI token consumption;</li>
+<li>number of meetings attended;</li>
+<li>percentage utilisation targets that eliminate slack needed for learning and incident response.</li>
+</ul>
+<h3 id="15-2-the-measurement-stack">15.2 The measurement stack</h3>
+<p><strong>Outcome:</strong> Value realised vs thesis, Customer/user success measure, Risk reduced, Time from idea to measurable outcome, Mission stop/pivot rate.</p>
+<p><strong>Flow:</strong> Lead time distribution, Cycle time distribution, Work in progress, Blocked time, Deployment frequency, Queue age.</p>
+<p><strong>Reliability:</strong> SLO attainment, Change failure rate, Mean time to restore, Impact-tolerance test performance, Recovery exercise pass rate.</p>
+<p><strong>Assurance:</strong> Automated control coverage, Evidence freshness, Open exception age, Mean time to remediate control gaps, Regulator Replay pass rate.</p>
+<p><strong>Platform:</strong> Paved-road adoption, Environment lead time, Build/test duration, Self-service completion rate, Platform NPS / task success.</p>
+<p><strong>AI:</strong> Task eval pass rate, Human override/escalation rate, Unsafe-action prevention rate, Cost per successful task, Agent authority distribution.</p>
+<p><strong>Human system:</strong> Focus-time ratio, Meeting load, On-call burden, Toil ratio, Cognitive-load pulse, Psychological-safety pulse.</p>
+<p><strong>Economics:</strong> Unit cost, Cloud anomaly rate, Cost of delay, Supplier concentration, Forecast vs realised total cost.</p>
+<p>Metrics should be read as a system. Faster flow with rising failure and cognitive overload is not success. Higher reliability achieved by freezing all change is not success. Lower cost that increases recovery time or supplier concentration may not be success.</p>
+<h3 id="15-3-focus-budget">15.3 Focus budget</h3>
+<p>Crews should reserve meaningful uninterrupted focus time. As a default design target, routine recurring meetings should consume <strong>less than 10–15% of maker time</strong> unless the nature of the work is inherently collaborative. AI-generated Signal Sweeps, automatic proof capture and exception-based coordination are the main mechanisms for achieving this.</p>
+<h3 id="15-4-toil-budget">15.4 Toil budget</h3>
+<p>Any repeated manual activity that can be deterministically automated, safely delegated to an agent or eliminated through platform design should be tracked as toil. A Crew with rising toil is accumulating operational debt even if feature output appears healthy.</p>
+<hr />
+<h2 id="16-technical-reference-architecture-for-meridian-itself">16. Technical reference architecture for Meridian itself</h2>
+<p>A Meridian implementation can be assembled from existing enterprise tools. The standard is intentionally vendor-neutral.</p>
+<h3 id="16-1-core-capabilities">16.1 Core capabilities</h3>
+<ol>
+<li><strong>Identity plane</strong> — people, workloads and agents with strong authentication and lifecycle management.</li>
+<li><strong>Source &amp; artefact plane</strong> — version control, builds, artefact registries, SBOM/provenance.</li>
+<li><strong>Delivery plane</strong> — CI/CD, infrastructure as code, progressive delivery, environment policy.</li>
+<li><strong>Observability plane</strong> — logs, metrics, traces, user and business signals.</li>
+<li><strong>Policy plane</strong> — policy-as-code and decision APIs.</li>
+<li><strong>Service graph</strong> — observed resources, dependencies, ownership and criticality.</li>
+<li><strong>Evidence store</strong> — append-only or tamper-evident evidence with retention controls.</li>
+<li><strong>Knowledge graph</strong> — relationships across obligations, controls, services, suppliers, decisions and incidents.</li>
+<li><strong>AI gateway</strong> — model/provider abstraction, data controls, prompt/tool policy, evaluation and audit.</li>
+<li><strong>Experience layer</strong> — portals and chat interfaces for Crews, Stewards, executives, auditors and regulators.</li>
+</ol>
+<h3 id="16-2-design-rule-api-first-portal-second">16.2 Design rule: API first, portal second</h3>
+<p>Every important governance capability should be addressable through APIs/events so that humans, CI/CD systems and AI agents operate on the same control system. Portals are views, not the source of truth.</p>
+<h3 id="16-3-design-rule-observed-reality-beats-declared-reality">16.3 Design rule: observed reality beats declared reality</h3>
+<p>The system should continuously reconcile declared service metadata against cloud/resource discovery, runtime telemetry, identity systems, repositories and supplier data. Drift is itself a control signal.</p>
+<hr />
+<h2 id="17-conformance-model">17. Conformance model</h2>
+<h3 id="17-1-maturity-states">17.1 Maturity states</h3>
+<ul>
+<li><strong>M0 — Ticketed:</strong> controls and work rely heavily on manual queues, documents and person-to-person knowledge.</li>
+<li><strong>M1 — Visible:</strong> ownership, services, risk and evidence are consistently inventoried and searchable.</li>
+<li><strong>M2 — Paved:</strong> common paths encode default controls; self-service replaces repeated ticketing.</li>
+<li><strong>M3 — Proven:</strong> proof bundles and the Control Graph provide continuous, reusable assurance.</li>
+<li><strong>M4 — Adaptive:</strong> telemetry automatically changes policy, release patterns, capacity, testing frequency and risk attention within authorised bounds.</li>
+<li><strong>M5 — Bounded autonomous:</strong> AI agents can safely run meaningful portions of the operating system with continuously revalidated authority and human accountability.</li>
+</ul>
+<p>Critical services should aim for M3 before increasing AI autonomy materially.</p>
+<h3 id="17-2-conformance-claims">17.2 Conformance claims</h3>
+<p>An organisation claiming “Meridian Conformant” should publish or retain:</p>
+<ul>
+<li>scope and legal entities;</li>
+<li>active regulatory profiles;</li>
+<li>excluded clauses and justification, if any;</li>
+<li>maturity by domain;</li>
+<li>independent assurance status;</li>
+<li>date of assessment;</li>
+<li>material open exception count and ageing;</li>
+<li>critical-service recovery-test status.</li>
+</ul>
+<h3 id="17-3-audit-philosophy">17.3 Audit philosophy</h3>
+<p>Audits should sample the running system and reconstruct decisions through evidence. Point-in-time document perfection is a weak signal if operational reality has drifted. Meridian therefore prioritises evidence freshness, observed inventory and Regulator Replay.</p>
+<hr />
+<h2 id="18-adoption-from-existing-enterprise-it-to-meridian">18. Adoption: from existing enterprise IT to Meridian</h2>
+<h3 id="first-30-days-make-reality-visible">First 30 days — make reality visible</h3>
+<ul>
+<li>name an executive sponsor and standard steward;</li>
+<li>identify critical/important business services;</li>
+<li>establish a regulatory inventory and initial profiles;</li>
+<li>select 2–3 pilot Crews and one platform team;</li>
+<li>create Service Passports;</li>
+<li>baseline flow, reliability, assurance, toil and meeting load;</li>
+<li>inventory AI already in use, including unofficial use;</li>
+<li>choose one high-friction approval queue to replace with a guardrail.</li>
+</ul>
+<h3 id="days-31-90-create-the-first-paved-road">Days 31–90 — create the first paved road</h3>
+<ul>
+<li>define the first Proof Bundle schema;</li>
+<li>connect source, CI/CD, policy and deployment evidence;</li>
+<li>implement risk-based change classification;</li>
+<li>establish Signal Sweep and Show the Thing;</li>
+<li>create the first Control Graph slice for one critical service;</li>
+<li>define AI autonomy levels and an approved AI gateway;</li>
+<li>turn 3–5 common control requirements into executable checks;</li>
+<li>run a Black Sky and one recovery test.</li>
+</ul>
+<h3 id="months-4-6-prove-the-operating-model">Months 4–6 — prove the operating model</h3>
+<ul>
+<li>expand paved-road adoption;</li>
+<li>move Stewardship Circles from routine reviews toward policy/pattern ownership;</li>
+<li>run Regulator Replay monthly;</li>
+<li>connect suppliers and data flows to the graph;</li>
+<li>introduce Mission Market for portfolio reallocation;</li>
+<li>deploy bounded A1/A2 agents broadly and selected A3 agents where reversible and measurable;</li>
+<li>independently assure the pilot critical services.</li>
+</ul>
+<h3 id="months-7-12-scale-the-control-system">Months 7–12 — scale the control system</h3>
+<ul>
+<li>migrate remaining material services to Service Passports;</li>
+<li>retire duplicate governance packs and manual inventory processes;</li>
+<li>integrate regulatory change monitoring;</li>
+<li>expand control/evidence mappings across required profiles;</li>
+<li>establish enterprise platform SLOs;</li>
+<li>test concentration and exit for critical suppliers;</li>
+<li>publish an internal Meridian conformance dashboard;</li>
+<li>increase autonomy only where M3 proof maturity exists.</li>
+</ul>
+<h3 id="year-2-onward-adaptive-enterprise">Year 2 onward — adaptive enterprise</h3>
+<ul>
+<li>use telemetry to select assurance frequency dynamically;</li>
+<li>model systemic dependencies and concentration risk;</li>
+<li>let agents handle more reversible operational work;</li>
+<li>expose evidence views to internal audit and regulators where appropriate;</li>
+<li>prune ceremonies, controls and reports that no longer improve outcomes;</li>
+<li>update regulatory profiles continuously while keeping the Constitution stable.</li>
+</ul>
+<hr />
+<h2 id="19-what-makes-meridian-fun">19. What makes Meridian fun</h2>
+<p>Meridian deliberately changes the social experience of enterprise technology.</p>
+<ul>
+<li><strong>Visible missions</strong> replace anonymous ticket queues.</li>
+<li><strong>Show the Thing</strong> replaces status theatre.</li>
+<li><strong>Craft Studios</strong> replace passive training decks.</li>
+<li><strong>Chaos Carnival</strong> makes resilience a shared sport rather than an audit demand.</li>
+<li><strong>Regulator Replay</strong> makes assurance a systems challenge, not a scramble.</li>
+<li><strong>Mission Market</strong> gives teams a live narrative for why work matters and makes stopping low-value work legitimate.</li>
+<li><strong>AI removes recital.</strong> People do not spend meetings reading information that software can summarise.</li>
+<li><strong>Paved roads create flow.</strong> Security and platform engineering become accelerators rather than departments to negotiate with.</li>
+<li><strong>Evidence creates confidence.</strong> People can ship faster because the system can prove what happened.</li>
+</ul>
+<p>Fun is never used to trivialise risk, incidents or regulation. It is used to make serious work more human, memorable and participatory.</p>
+<hr />
+<h2 id="20-anti-patterns">20. Anti-patterns</h2>
+<p>An organisation is drifting away from Meridian when:</p>
+<ul>
+<li>every team is “Agile” but releases still require weeks of approval;</li>
+<li>AI writes more tickets than it removes;</li>
+<li>a platform exists but is harder to use than building locally;</li>
+<li>architecture governance measures meeting attendance rather than design quality;</li>
+<li>security finds defects only near release;</li>
+<li>risk registers are detached from services and telemetry;</li>
+<li>service ownership changes without machine-readable records;</li>
+<li>the CMDB disagrees with observed infrastructure and nobody knows which to trust;</li>
+<li>audits require screenshot campaigns;</li>
+<li>critical recovery plans have never been exercised;</li>
+<li>AI agents have broad credentials “for convenience”;</li>
+<li>teams optimise deployment count while customer outcomes decline;</li>
+<li>every new regulation creates a new spreadsheet and committee.</li>
+</ul>
+<hr />
+<h2 id="21-governance-of-the-standard-itself">21. Governance of the Standard itself</h2>
+<p>Meridian should evolve like an open technical standard rather than a consulting methodology.</p>
+<ul>
+<li>The Constitution changes rarely and requires broad evidence.</li>
+<li>Normative clauses use stable identifiers.</li>
+<li>Regulatory profiles can change rapidly without renumbering the core.</li>
+<li>Practice-library items are non-normative and can be added or retired freely.</li>
+<li>Mappings to external standards cite source/version and date.</li>
+<li>Proposed changes include rationale, evidence and compatibility impact.</li>
+<li>AI may draft updates and detect regulatory deltas, but human maintainers approve normative text.</li>
+</ul>
+<p>A future formal governance model could use a small standards council, public request-for-comment process, reference implementations and independent conformance assessors.</p>
+<hr />
+<h2 id="22-source-and-inspiration-register">22. Source and inspiration register</h2>
+<p>This specification is an original synthesis. It is informed by public laws, regulatory guidance, management-system standards, cyber frameworks, software-delivery practices and economic history. It does <strong>not</strong> reproduce copyrighted standards such as ISO texts; organisations must obtain and interpret the authoritative sources applicable to them.</p>
+<table>
+<thead>
+<tr>
+  <th>Area</th>
+  <th>Source</th>
+  <th>Use in Meridian</th>
+  <th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>EU DORA</td>
+  <td>Regulation (EU) 2022/2554</td>
+  <td>Board accountability for ICT risk, documented ICT risk-management framework, continuity, testing, incident and third-party requirements.</td>
+  <td>https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554</td>
+</tr>
+<tr>
+  <td>EU NIS2</td>
+  <td>Directive (EU) 2022/2555</td>
+  <td>Management-body responsibility and cybersecurity risk-management measures for essential and important entities, subject to national transposition.</td>
+  <td>https://eur-lex.europa.eu/eli/dir/2022/2555</td>
+</tr>
+<tr>
+  <td>EU AI Act</td>
+  <td>Regulation (EU) 2024/1689 and Commission implementation material</td>
+  <td>Risk-based AI obligations; transparency obligations are applicable from 2 Aug 2026 and high-risk timelines have been amended/extended.</td>
+  <td>https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</td>
+</tr>
+<tr>
+  <td>UK data protection</td>
+  <td>ICO accountability &amp; data protection by design guidance</td>
+  <td>Accountability, evidence, security, documentation and data protection by design/default.</td>
+  <td>https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/</td>
+</tr>
+<tr>
+  <td>UK data reform</td>
+  <td>Data (Use and Access) Act 2025 guidance</td>
+  <td>Changes to UK data-protection law including automated-decision safeguards.</td>
+  <td>https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes</td>
+</tr>
+<tr>
+  <td>UK financial resilience</td>
+  <td>FCA PS21/3</td>
+  <td>Important business services, impact tolerances and operational-resilience expectations.</td>
+  <td>https://www.fca.org.uk/publication/policy/ps21-3-operational-resilience.pdf</td>
+</tr>
+<tr>
+  <td>UK prudential resilience</td>
+  <td>PRA PS6/21</td>
+  <td>Impact tolerances and ongoing operational-resilience expectations for in-scope firms.</td>
+  <td>https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2021/march/ps621.pdf</td>
+</tr>
+<tr>
+  <td>UK cyber</td>
+  <td>NCSC Cyber Assessment Framework</td>
+  <td>Outcome-focused cyber resilience for essential functions.</td>
+  <td>https://www.ncsc.gov.uk/collection/caf</td>
+</tr>
+<tr>
+  <td>UK cyber governance</td>
+  <td>DSIT Cyber Governance Code of Practice</td>
+  <td>Board-level cyber-risk governance expectations and good practice.</td>
+  <td>https://www.gov.uk/government/publications/cyber-governance-code-of-practice</td>
+</tr>
+<tr>
+  <td>UK cyber legislation pipeline</td>
+  <td>Cyber Security and Resilience Bill collection</td>
+  <td>Tracks proposed expansion/reform of the UK NIS regime; applicability depends on enactment and final text.</td>
+  <td>https://www.gov.uk/government/collections/cyber-security-and-resilience-bill</td>
+</tr>
+<tr>
+  <td>ISO AI</td>
+  <td>ISO/IEC 42001:2023</td>
+  <td>AI management system requirements and continual improvement.</td>
+  <td>https://www.iso.org/standard/42001</td>
+</tr>
+<tr>
+  <td>ISO information security</td>
+  <td>ISO/IEC 27001:2022</td>
+  <td>Information security management system requirements.</td>
+  <td>https://www.iso.org/standard/27001</td>
+</tr>
+<tr>
+  <td>ISO service management</td>
+  <td>ISO/IEC 20000-1:2018</td>
+  <td>Service management system requirements.</td>
+  <td>https://www.iso.org/standard/70636.html</td>
+</tr>
+<tr>
+  <td>ISO continuity</td>
+  <td>ISO 22301:2019</td>
+  <td>Business continuity management system requirements.</td>
+  <td>https://www.iso.org/standard/75106.html</td>
+</tr>
+<tr>
+  <td>NIST cybersecurity</td>
+  <td>Cybersecurity Framework 2.0</td>
+  <td>Govern, Identify, Protect, Detect, Respond, Recover outcomes.</td>
+  <td>https://www.nist.gov/cyberframework</td>
+</tr>
+<tr>
+  <td>NIST secure development</td>
+  <td>Secure Software Development Framework SP 800-218</td>
+  <td>Secure software development practices.</td>
+  <td>https://csrc.nist.gov/publications/detail/sp/800-218/final</td>
+</tr>
+<tr>
+  <td>PCI</td>
+  <td>PCI DSS v4.0.1</td>
+  <td>Payment-card data security standard.</td>
+  <td>https://www.pcisecuritystandards.org/document_library/?class=pcidss&amp;doc=pci_dss</td>
+</tr>
+<tr>
+  <td>US cyber disclosure</td>
+  <td>SEC cybersecurity disclosure rules</td>
+  <td>Material cyber incident and governance/risk disclosures for registrants.</td>
+  <td>https://www.sec.gov/newsroom/press-releases/2023-139</td>
+</tr>
+<tr>
+  <td>US health</td>
+  <td>HIPAA Security Rule</td>
+  <td>Administrative, physical and technical safeguards for ePHI.</td>
+  <td>https://www.hhs.gov/hipaa/for-professionals/security/index.html</td>
+</tr>
+<tr>
+  <td>Australia</td>
+  <td>APRA CPS 230 / CPS 234</td>
+  <td>Operational risk, resilience, service provider and information-security obligations for APRA-regulated entities.</td>
+  <td>https://www.apra.gov.au/standards/cps-230</td>
+</tr>
+<tr>
+  <td>Canada</td>
+  <td>OSFI Guideline B-13</td>
+  <td>Technology and cyber risk-management expectations for federally regulated financial institutions.</td>
+  <td>https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/technology-cyber-risk-management</td>
+</tr>
+<tr>
+  <td>Singapore</td>
+  <td>MAS Technology Risk Management</td>
+  <td>Technology-risk management expectations for financial institutions.</td>
+  <td>https://www.mas.gov.sg/regulation/guidelines/technology-risk-management-guidelines</td>
+</tr>
+<tr>
+  <td>Historical lens</td>
+  <td>NBER — General Purpose Technologies</td>
+  <td>Electricity and IT as economy-wide general-purpose technologies.</td>
+  <td>https://www.nber.org/papers/w11093</td>
+</tr>
+<tr>
+  <td>Historical lens</td>
+  <td>NBER — General Purpose Technologies “Engines of Growth?”</td>
+  <td>Pervasiveness, improvement potential and complementary innovation as properties of transformative technologies.</td>
+  <td>https://www.nber.org/papers/w4148</td>
+</tr>
+</tbody>
+</table>
+<h3 id="legal-caveat">Legal caveat</h3>
+<p>Meridian is a technology operating standard, not legal advice. A regulatory profile is a control-mapping aid, not a determination of legal scope or compliance. Organisations shall have appropriately qualified legal/compliance owners determine applicability, validate material interpretations and track changes in law.</p>
+<hr />
+<h2 id="23-one-sentence-test">23. One-sentence test</h2>
+<p><strong>A Meridian enterprise can move quickly because its ordinary path is safe, observable and evidence-producing; it can adopt AI aggressively because authority is bounded; and it can face an auditor, regulator, customer or incident commander without reconstructing reality from memory.</strong></p>
+</article></div></main><footer><div class="shell footer-grid"><div><div class="brand"><span class="mark">M</span><span>MERIDIAN</span></div><p>Draft v0.1 · 26 Aug 2026</p></div><div><p>Original conceptual framework. Regulatory applicability and mappings require qualified legal/compliance validation.</p></div></div></footer></body></html>

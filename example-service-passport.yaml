@@ -1,0 +1,24 @@
+apiVersion: meridian/v0.1
+kind: ServicePassport
+metadata:
+  name: payments-ledger
+  steward: payments-platform
+spec:
+  purpose: Record and reconcile customer payment movements
+  criticality: C4
+  profiles: [BASE, UK-DATA, EU-DORA, UK-FS]
+  dataClasses: [confidential, restricted-personal]
+  slo:
+    availability: 99.95%
+    latencyP95Ms: 300
+  resilience:
+    impactTolerance: 2h
+    rto: 30m
+    rpo: 5m
+  interfaces:
+    - type: api
+      contract: openapi/payments-ledger.yaml
+  evidence:
+    controlGraphId: svc:payments-ledger
+  ai:
+    autonomyMax: A2

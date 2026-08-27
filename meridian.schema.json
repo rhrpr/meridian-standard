@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meridian.example/schema/service-passport-v0.1.json",
+  "title": "Meridian Service Passport v0.1",
+  "type": "object",
+  "required": [
+    "apiVersion",
+    "kind",
+    "metadata",
+    "spec"
+  ],
+  "properties": {
+    "apiVersion": {
+      "const": "meridian/v0.1"
+    },
+    "kind": {
+      "const": "ServicePassport"
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "name",
+        "steward"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "steward": {
+          "type": "string"
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": [
+        "purpose",
+        "criticality",
+        "profiles"
+      ],
+      "properties": {
+        "purpose": {
+          "type": "string"
+        },
+        "criticality": {
+          "enum": [
+            "C0",
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ]
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataClasses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slo": {
+          "type": "object"
+        },
+        "resilience": {
+          "type": "object"
+        },
+        "interfaces": {
+          "type": "array"
+        },
+        "evidence": {
+          "type": "object"
+        },
+        "ai": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

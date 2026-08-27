@@ -1,0 +1,488 @@
+[
+  {
+    "id": "MER-GOV-001",
+    "domain": "Governance",
+    "title": "Board accountability",
+    "text": "The governing body shall define technology risk appetite, approve critical technology policies, and retain ultimate accountability for technology, cyber, data and AI risk."
+  },
+  {
+    "id": "MER-GOV-002",
+    "domain": "Governance",
+    "title": "Decision rights",
+    "text": "Each material technology service, product, platform, data domain and AI system shall have one named accountable steward with explicit decision rights."
+  },
+  {
+    "id": "MER-GOV-003",
+    "domain": "Governance",
+    "title": "Live control graph",
+    "text": "The organisation shall maintain a traceable graph linking obligations, policies, controls, services, assets, suppliers, changes, evidence, risks, incidents and accountable owners."
+  },
+  {
+    "id": "MER-GOV-004",
+    "domain": "Governance",
+    "title": "Exceptions as leases",
+    "text": "Departures from mandatory controls shall be time-bounded, risk-assessed, approved by an authorised risk owner, linked to compensating controls, and automatically expire unless renewed."
+  },
+  {
+    "id": "MER-GOV-005",
+    "domain": "Governance",
+    "title": "Policy as executable intent",
+    "text": "Where a requirement is objectively testable, the organisation shall express it as machine-testable policy or automated evidence collection rather than rely only on manual review."
+  },
+  {
+    "id": "MER-GOV-006",
+    "domain": "Governance",
+    "title": "Independent assurance",
+    "text": "Control design and operating effectiveness for material risks shall be subject to proportionate independent assurance, with independence increasing with service criticality."
+  },
+  {
+    "id": "MER-GOV-007",
+    "domain": "Governance",
+    "title": "Regulatory inventory",
+    "text": "The organisation shall maintain a current inventory of applicable laws, regulations, contractual obligations and adopted standards, including jurisdiction, scope, effective date and accountable legal or compliance owner."
+  },
+  {
+    "id": "MER-GOV-008",
+    "domain": "Governance",
+    "title": "No metric gaming",
+    "text": "Technology performance measures shall assess systems, services and outcomes; individual productivity rankings based on tickets, commits, story points or lines of code are prohibited."
+  },
+  {
+    "id": "MER-OUT-001",
+    "domain": "Outcomes",
+    "title": "Mission definition",
+    "text": "Material work shall start with a measurable mission outcome, beneficiary, baseline, target, guardrails, expected value, maximum acceptable harm and intended review date."
+  },
+  {
+    "id": "MER-OUT-002",
+    "domain": "Outcomes",
+    "title": "Outcome economics",
+    "text": "Mission selection shall consider expected value, cost of delay, risk reduction, strategic fit, reversibility and opportunity cost."
+  },
+  {
+    "id": "MER-OUT-003",
+    "domain": "Outcomes",
+    "title": "Smallest valuable passage",
+    "text": "Teams shall seek the smallest independently valuable and observable change that can test an assumption or improve an outcome."
+  },
+  {
+    "id": "MER-OUT-004",
+    "domain": "Outcomes",
+    "title": "Stop rules",
+    "text": "Every mission shall define evidence that would cause the work to stop, pivot, narrow or expand."
+  },
+  {
+    "id": "MER-FLW-001",
+    "domain": "Flow",
+    "title": "Pull over push",
+    "text": "Persistent teams shall pull work within explicit work-in-progress limits rather than accept unbounded concurrent commitments."
+  },
+  {
+    "id": "MER-FLW-002",
+    "domain": "Flow",
+    "title": "Forecast from flow",
+    "text": "Delivery forecasts shall use historical cycle-time distributions, dependency evidence and confidence ranges rather than story-point conversion to dates."
+  },
+  {
+    "id": "MER-FLW-003",
+    "domain": "Flow",
+    "title": "Async default",
+    "text": "Routine status, coordination and evidence gathering shall be asynchronous by default; synchronous meetings shall exist only for decisions, creativity, conflict resolution, learning or relationship-building."
+  },
+  {
+    "id": "MER-FLW-004",
+    "domain": "Flow",
+    "title": "Meeting expiry",
+    "text": "Recurring meetings shall declare an owner, purpose, expected output, maximum duration and review/expiry date."
+  },
+  {
+    "id": "MER-FLW-005",
+    "domain": "Flow",
+    "title": "Blocked-work escalation",
+    "text": "Blocked work affecting a critical path or critical service shall be surfaced automatically and escalated by elapsed risk, not by hierarchy."
+  },
+  {
+    "id": "MER-FLW-006",
+    "domain": "Flow",
+    "title": "Dependency contracts",
+    "text": "Cross-team dependencies shall be expressed as versioned service, API, data, platform or decision contracts with explicit expectations rather than informal hand-offs."
+  },
+  {
+    "id": "MER-ARC-001",
+    "domain": "Architecture",
+    "title": "Composable boundaries",
+    "text": "Systems shall be decomposed around stable business or platform capabilities with explicit interfaces and ownership boundaries appropriate to their change rate and risk."
+  },
+  {
+    "id": "MER-ARC-002",
+    "domain": "Architecture",
+    "title": "Open interfaces",
+    "text": "Material integration points shall use documented, versioned interfaces and data contracts designed for testability, observability and controlled evolution."
+  },
+  {
+    "id": "MER-ARC-003",
+    "domain": "Architecture",
+    "title": "Reversibility",
+    "text": "Architectural decisions shall state their reversibility. Irreversible or high-lock-in decisions require proportionately stronger evidence and senior review."
+  },
+  {
+    "id": "MER-ARC-004",
+    "domain": "Architecture",
+    "title": "Platform reuse",
+    "text": "Common capabilities shall be provided as paved-road platform products where repeated local implementation would increase risk, cost or cognitive load."
+  },
+  {
+    "id": "MER-ARC-005",
+    "domain": "Architecture",
+    "title": "Architecture records",
+    "text": "Material architecture decisions shall be captured as concise, version-controlled decision records linked to assumptions, alternatives, risks and evidence."
+  },
+  {
+    "id": "MER-ARC-006",
+    "domain": "Architecture",
+    "title": "Observed inventory",
+    "text": "The authoritative technology inventory shall be reconciled continuously against observed infrastructure, identities, software and cloud resources; unobserved manual CMDB records alone are insufficient."
+  },
+  {
+    "id": "MER-SEC-001",
+    "domain": "Security",
+    "title": "Secure by default",
+    "text": "Security controls shall be embedded in default platforms, templates, pipelines and runtime configurations so the safe path is easier than the unsafe path."
+  },
+  {
+    "id": "MER-SEC-002",
+    "domain": "Security",
+    "title": "Least privilege",
+    "text": "Human and machine identities shall receive the minimum privileges required, for the minimum time required, with privileged activity strongly authenticated and logged."
+  },
+  {
+    "id": "MER-SEC-003",
+    "domain": "Security",
+    "title": "Threat modelling",
+    "text": "Material changes shall include threat and abuse-case analysis proportionate to data sensitivity, exposure, privilege, novelty and blast radius."
+  },
+  {
+    "id": "MER-SEC-004",
+    "domain": "Security",
+    "title": "Software supply chain",
+    "text": "Software delivery shall maintain provenance for source, dependencies and build outputs, perform proportionate vulnerability and integrity checks, and support rapid component identification and remediation."
+  },
+  {
+    "id": "MER-SEC-005",
+    "domain": "Security",
+    "title": "Vulnerability risk",
+    "text": "Vulnerabilities shall be prioritised using exploitability, exposure, business impact and compensating controls, with remediation targets based on risk rather than severity score alone."
+  },
+  {
+    "id": "MER-SEC-006",
+    "domain": "Security",
+    "title": "Cryptography",
+    "text": "Sensitive data shall be protected in transit and at rest using current, approved cryptography with managed keys, rotation, access controls and migration plans for deprecated algorithms."
+  },
+  {
+    "id": "MER-SEC-007",
+    "domain": "Security",
+    "title": "Secrets",
+    "text": "Secrets shall not be stored in source code or unprotected work systems; machine-managed secret issuance, rotation and revocation shall be used for material systems."
+  },
+  {
+    "id": "MER-SEC-008",
+    "domain": "Security",
+    "title": "Security telemetry",
+    "text": "Security-relevant events shall be captured, time-synchronised, protected from tampering and retained according to risk, legal and investigative requirements."
+  },
+  {
+    "id": "MER-DAT-001",
+    "domain": "Data & Privacy",
+    "title": "Data inventory",
+    "text": "Material data sets and flows shall have defined owners, classification, purpose, source, recipients, retention and lineage."
+  },
+  {
+    "id": "MER-DAT-002",
+    "domain": "Data & Privacy",
+    "title": "Data minimisation",
+    "text": "Personal and sensitive data collection, access, processing and retention shall be limited to what is necessary for a defined purpose."
+  },
+  {
+    "id": "MER-DAT-003",
+    "domain": "Data & Privacy",
+    "title": "Privacy by design",
+    "text": "Products and services processing personal data shall consider privacy from initial design through decommissioning, and high-risk processing shall trigger a documented privacy impact assessment where legally required."
+  },
+  {
+    "id": "MER-DAT-004",
+    "domain": "Data & Privacy",
+    "title": "Data subject safeguards",
+    "text": "Where automated processing materially affects individuals, required information, challenge, representation and human-intervention safeguards shall be implemented according to applicable law."
+  },
+  {
+    "id": "MER-DAT-005",
+    "domain": "Data & Privacy",
+    "title": "Data quality",
+    "text": "Data used for material decisions, regulatory reporting or consequential AI shall have defined quality expectations, validation, provenance and correction mechanisms."
+  },
+  {
+    "id": "MER-DAT-006",
+    "domain": "Data & Privacy",
+    "title": "Retention and deletion",
+    "text": "Data shall have enforceable retention and disposal rules, including legal holds, backup handling and verified deletion where required."
+  },
+  {
+    "id": "MER-REL-001",
+    "domain": "Resilience",
+    "title": "Service criticality",
+    "text": "Every material service shall have a criticality classification based on harm from disruption, including customer, safety, financial, market, legal and systemic impact."
+  },
+  {
+    "id": "MER-REL-002",
+    "domain": "Resilience",
+    "title": "Impact tolerance",
+    "text": "Critical services shall define maximum tolerable disruption and supporting recovery objectives in business terms, then map dependencies needed to remain within them."
+  },
+  {
+    "id": "MER-REL-003",
+    "domain": "Resilience",
+    "title": "SLOs",
+    "text": "User-facing and enabling services shall define service-level objectives or equivalent measurable reliability targets appropriate to criticality."
+  },
+  {
+    "id": "MER-REL-004",
+    "domain": "Resilience",
+    "title": "Recovery by test",
+    "text": "Recovery capability shall be demonstrated through scheduled restoration, failover or continuity exercises; untested recovery documentation is not sufficient evidence."
+  },
+  {
+    "id": "MER-REL-005",
+    "domain": "Resilience",
+    "title": "Progressive change",
+    "text": "Production change shall use automated testing and, where appropriate, progressive exposure, health checks, rollback or roll-forward mechanisms to limit blast radius."
+  },
+  {
+    "id": "MER-REL-006",
+    "domain": "Resilience",
+    "title": "Capacity and saturation",
+    "text": "Critical services shall monitor capacity, dependency saturation and failure modes with enough headroom or elasticity to meet defined tolerances."
+  },
+  {
+    "id": "MER-REL-007",
+    "domain": "Resilience",
+    "title": "Incident command",
+    "text": "Material incidents shall use a clear incident command model separating technical coordination, business decision-making, communications and evidence capture."
+  },
+  {
+    "id": "MER-REL-008",
+    "domain": "Resilience",
+    "title": "Learning without blame",
+    "text": "Post-incident learning shall focus on system conditions, incentives, controls and recovery opportunities rather than individual blame, while preserving accountability for misconduct."
+  },
+  {
+    "id": "MER-SUP-001",
+    "domain": "Third Parties",
+    "title": "Supplier inventory",
+    "text": "Technology and data suppliers shall be inventoried with service dependency, data access, concentration, substitutability, location and exit characteristics."
+  },
+  {
+    "id": "MER-SUP-002",
+    "domain": "Third Parties",
+    "title": "Critical supplier assessment",
+    "text": "Suppliers supporting critical services or sensitive processing shall undergo proportionate pre-contract and ongoing assessment, including security, resilience, financial, legal, AI and sub-supplier risks."
+  },
+  {
+    "id": "MER-SUP-003",
+    "domain": "Third Parties",
+    "title": "Contract controls",
+    "text": "Material supplier contracts shall contain applicable security, privacy, audit, incident, continuity, data location, subcontracting, portability, exit and regulatory-access terms."
+  },
+  {
+    "id": "MER-SUP-004",
+    "domain": "Third Parties",
+    "title": "Exit tested",
+    "text": "Critical third-party arrangements shall have credible exit, substitution or continuity strategies tested at a frequency proportional to concentration and switching difficulty."
+  },
+  {
+    "id": "MER-AI-001",
+    "domain": "AI",
+    "title": "AI inventory",
+    "text": "All material AI systems and general-purpose AI dependencies shall be registered with purpose, owner, provider/model, version, data classes, users, autonomy level, risk class and jurisdictions."
+  },
+  {
+    "id": "MER-AI-002",
+    "domain": "AI",
+    "title": "Human accountability",
+    "text": "A human or governing body shall remain accountable for decisions delegated to or supported by AI; AI output shall not be treated as an accountable approval."
+  },
+  {
+    "id": "MER-AI-003",
+    "domain": "AI",
+    "title": "Autonomy classification",
+    "text": "AI agents shall operate under an explicit autonomy level defining permitted actions, environments, approval requirements, spend/privilege limits and emergency stop conditions."
+  },
+  {
+    "id": "MER-AI-004",
+    "domain": "AI",
+    "title": "Evaluation before authority",
+    "text": "Before AI receives production authority, it shall pass task-specific evaluations covering correctness, safety, security, privacy, bias or fairness where relevant, robustness and failure handling."
+  },
+  {
+    "id": "MER-AI-005",
+    "domain": "AI",
+    "title": "Prompt and model provenance",
+    "text": "Material AI behaviour shall be reproducible enough for investigation through versioned prompts/instructions, model/provider identity, retrieval sources, tool permissions and relevant configuration."
+  },
+  {
+    "id": "MER-AI-006",
+    "domain": "AI",
+    "title": "AI transparency",
+    "text": "Users and affected persons shall receive legally required notice when interacting with or being materially affected by AI, and machine-generated content shall be identified where required."
+  },
+  {
+    "id": "MER-AI-007",
+    "domain": "AI",
+    "title": "AI data controls",
+    "text": "Sensitive or regulated data shall not be disclosed to AI models, tools or providers unless the use is authorised, contractually governed and technically controlled for the intended purpose."
+  },
+  {
+    "id": "MER-AI-008",
+    "domain": "AI",
+    "title": "Agent least agency",
+    "text": "AI agents shall receive the minimum tools, data, credentials, network reach, runtime duration and financial authority required for the task."
+  },
+  {
+    "id": "MER-AI-009",
+    "domain": "AI",
+    "title": "Agent evidence",
+    "text": "Material agent actions shall produce tamper-evident logs sufficient to reconstruct intent, inputs, tool calls, changes, approvals and outcomes."
+  },
+  {
+    "id": "MER-AI-010",
+    "domain": "AI",
+    "title": "AI fallback",
+    "text": "Consequential AI-enabled processes shall define human override, degraded-mode operation and safe shutdown or rollback paths."
+  },
+  {
+    "id": "MER-AI-011",
+    "domain": "AI",
+    "title": "AI change management",
+    "text": "Material model, prompt, retrieval, tool or policy changes shall be risk-classified, evaluated and released through the same evidence-bearing change system as software."
+  },
+  {
+    "id": "MER-AI-012",
+    "domain": "AI",
+    "title": "AI incident response",
+    "text": "The incident process shall explicitly cover harmful, deceptive, unsafe, privacy-impacting or uncontrolled AI behaviour, including provider/model compromise and prompt/tool abuse."
+  },
+  {
+    "id": "MER-OPS-001",
+    "domain": "Operations",
+    "title": "Service passport",
+    "text": "Every material service shall maintain a machine-readable service passport containing ownership, purpose, criticality, interfaces, dependencies, data classes, SLOs, recovery targets, runbooks and regulatory profiles."
+  },
+  {
+    "id": "MER-OPS-002",
+    "domain": "Operations",
+    "title": "Observability",
+    "text": "Material services shall emit telemetry sufficient to understand user experience, system health, dependencies, security signals and business outcomes."
+  },
+  {
+    "id": "MER-OPS-003",
+    "domain": "Operations",
+    "title": "Runbooks as executable knowledge",
+    "text": "Frequent or critical operational procedures shall be automated or expressed as executable, tested runbooks where practical."
+  },
+  {
+    "id": "MER-OPS-004",
+    "domain": "Operations",
+    "title": "Toil budget",
+    "text": "Teams shall measure repetitive manual operational toil and maintain an explicit improvement backlog when toil exceeds their locally defined threshold."
+  },
+  {
+    "id": "MER-OPS-005",
+    "domain": "Operations",
+    "title": "Change traceability",
+    "text": "Production changes shall be attributable to an identity, source revision, build, approval/policy decision, deployment event and resulting health evidence."
+  },
+  {
+    "id": "MER-OPS-006",
+    "domain": "Operations",
+    "title": "End-of-life",
+    "text": "Technology assets, services, models and dependencies shall have lifecycle status and planned treatment for unsupported or obsolete components."
+  },
+  {
+    "id": "MER-PPL-001",
+    "domain": "People",
+    "title": "Persistent crews",
+    "text": "Core delivery ownership shall sit with persistent, multidisciplinary crews aligned to enduring services or capabilities rather than temporary project teams wherever practical."
+  },
+  {
+    "id": "MER-PPL-002",
+    "domain": "People",
+    "title": "Craft communities",
+    "text": "Professional disciplines shall maintain communities of practice that curate patterns, coach peers and improve shared standards without becoming approval bottlenecks."
+  },
+  {
+    "id": "MER-PPL-003",
+    "domain": "People",
+    "title": "AI literacy",
+    "text": "People who develop, procure, govern or use AI shall receive role-appropriate training in capabilities, limitations, risk, verification, security, privacy and acceptable use."
+  },
+  {
+    "id": "MER-PPL-004",
+    "domain": "People",
+    "title": "Psychological safety",
+    "text": "Operating practices shall make it safe to surface uncertainty, defects, incidents and risk early; incentives that reward concealment or late escalation are non-conformant."
+  },
+  {
+    "id": "MER-PPL-005",
+    "domain": "People",
+    "title": "Sustainable focus",
+    "text": "Teams shall protect focus time, limit unmanaged work in progress, design on-call sustainably and track cognitive load and recurring friction as operational risks."
+  },
+  {
+    "id": "MER-FIN-001",
+    "domain": "Economics",
+    "title": "Unit economics",
+    "text": "Material platforms and services shall understand meaningful unit-cost drivers and allocate technology cost in a way that supports responsible product and architecture decisions."
+  },
+  {
+    "id": "MER-FIN-002",
+    "domain": "Economics",
+    "title": "FinOps feedback",
+    "text": "Cloud and consumption-based technology shall have automated cost visibility, anomaly detection, budget guardrails and regular rightsizing or commitment review."
+  },
+  {
+    "id": "MER-FIN-003",
+    "domain": "Economics",
+    "title": "Value realisation",
+    "text": "Significant investments shall be reviewed against expected outcomes and total cost after delivery; funding shall be reallocated when evidence no longer supports the thesis."
+  },
+  {
+    "id": "MER-EVD-001",
+    "domain": "Evidence",
+    "title": "Proof bundle",
+    "text": "Every material production change shall generate a linked proof bundle containing the evidence required by its risk class and applicable profiles."
+  },
+  {
+    "id": "MER-EVD-002",
+    "domain": "Evidence",
+    "title": "Evidence freshness",
+    "text": "Controls relying on evidence shall define freshness expectations; stale evidence shall automatically reduce assurance status."
+  },
+  {
+    "id": "MER-EVD-003",
+    "domain": "Evidence",
+    "title": "Immutable audit trail",
+    "text": "Evidence required for material regulatory, security or financial assertions shall be protected against unauthorised modification and retained according to policy and law."
+  },
+  {
+    "id": "MER-EVD-004",
+    "domain": "Evidence",
+    "title": "Single fact, many obligations",
+    "text": "The assurance system shall reuse one trustworthy item of evidence across multiple mapped obligations where it proves the same control outcome."
+  },
+  {
+    "id": "MER-EVD-005",
+    "domain": "Evidence",
+    "title": "Regulator replay",
+    "text": "The organisation shall be able to reconstruct, from retained evidence, why a material decision or change was allowed and how required controls were satisfied at that time."
+  }
+]
