@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ensemble — A Standard for Enterprise Technology in the Age of AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14171f;
+    --ink-2:#1b202b;
+    --ink-3:#20263380;
+    --ivory:#f4efe0;
+    --ivory-dim:#b9b3a0;
+    --brass:#c9a227;
+    --brass-soft:#e3c874;
+    --verdigris:#5f9b8f;
+    --rule:#333a4a;
+    --crimson:#b25a44;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+  body{
+    margin:0; background:var(--ink); color:var(--ivory);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--brass); color:var(--ink); }
+  a{ color:var(--brass-soft); }
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:2px solid var(--brass); outline-offset:3px; border-radius:2px;
+  }
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:600; margin:0; color:var(--ivory); }
+  p{ margin:0 0 14px; color:var(--ivory-dim); }
+  .container{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  .eyebrow{
+    font-family:var(--mono); letter-spacing:.14em; text-transform:uppercase;
+    font-size:12px; color:var(--brass); margin:0 0 14px;
+  }
+  section{ padding:96px 0; position:relative; }
+  .staff{
+    max-width:var(--maxw); margin:0 auto; height:38px;
+    background-image:repeating-linear-gradient(to bottom, var(--rule) 0 1px, transparent 1px 8px);
+    opacity:.7;
+  }
+  .staff.tight{ height:20px; }
+
+  /* -------- reveal (progressive enhancement: visible by default; only animates
+     if JS confirms IntersectionObserver support by adding .js-reveal to <html>) -------- */
+  .reveal{ opacity:1; }
+  html.js-reveal .reveal{ opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease; }
+  html.js-reveal .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* -------- topbar -------- */
+  header.topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(20,23,31,.86); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width:var(--maxw); margin:0 auto; padding:14px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{ font-family:var(--serif); font-weight:700; letter-spacing:.02em; font-size:19px; color:var(--ivory); text-decoration:none; }
+  .brand span{ color:var(--brass); }
+  nav.navlinks{ display:flex; gap:22px; overflow-x:auto; scrollbar-width:none; }
+  nav.navlinks::-webkit-scrollbar{ display:none; }
+  nav.navlinks a{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ivory-dim); text-decoration:none; white-space:nowrap; padding:4px 2px;
+    border-bottom:1px solid transparent;
+  }
+  nav.navlinks a:hover{ color:var(--brass-soft); border-color:var(--brass); }
+
+  /* -------- hero -------- */
+  .hero{ padding:88px 0 60px; }
+  .hero-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:48px; align-items:center; }
+  .hero h1{ font-size:clamp(52px, 9vw, 96px); line-height:.92; letter-spacing:-.01em; margin-bottom:18px; }
+  .hero .tagline{ font-family:var(--serif); font-style:italic; font-size:clamp(20px,2.6vw,26px); color:var(--brass-soft); margin-bottom:22px; }
+  .hero .thesis{ font-size:18px; max-width:56ch; color:var(--ivory-dim); }
+  .hero .meta{
+    font-family:var(--mono); font-size:12.5px; color:var(--brass); letter-spacing:.04em;
+    margin-top:26px; border-top:1px solid var(--rule); padding-top:18px;
+  }
+  .medallion-wrap{ display:flex; justify-content:center; }
+  .medallion{ width:min(340px, 80vw); height:auto; }
+
+  /* -------- why now -------- */
+  .notes-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:36px; }
+  .note{
+    background:var(--ink-2); border:1px solid var(--rule); border-left:3px solid var(--brass);
+    padding:22px 22px 18px; border-radius:2px;
+  }
+  .note .tag{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); margin-bottom:10px; display:block; }
+  .note p{ margin:0; font-size:15px; color:var(--ivory); }
+
+  /* -------- threads (timeline) -------- */
+  .timeline{ position:relative; margin-top:44px; padding-left:26px; border-left:2px solid var(--rule); }
+  .thread{ position:relative; padding:0 0 42px 30px; }
+  .thread:last-child{ padding-bottom:4px; }
+  .thread::before{
+    content:''; position:absolute; left:-45px; top:4px; width:14px; height:14px;
+    border-radius:50%; background:var(--ink); border:2px solid var(--brass);
+  }
+  .thread .years{ font-family:var(--mono); font-size:12px; color:var(--verdigris); letter-spacing:.05em; }
+  .thread h3{ font-size:22px; margin:4px 0 8px; color:var(--ivory); }
+  .thread .breakthrough{ font-size:14.5px; color:var(--ivory-dim); margin-bottom:8px; }
+  .thread .pattern{ font-size:14.5px; }
+  .thread .pattern b{ color:var(--brass-soft); font-weight:600; }
+  .thread .answer{
+    margin-top:10px; font-size:14px; font-family:var(--mono); color:var(--brass-soft);
+    border-left:2px solid var(--verdigris); padding-left:12px;
+  }
+
+  /* -------- model -------- */
+  .model-block{ margin-top:40px; }
+  .model-block h3.subhead{ font-size:15px; font-family:var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--verdigris); margin-bottom:16px; }
+  .role-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; margin-bottom:44px; }
+  .role-card{ background:var(--ink-2); border:1px solid var(--rule); padding:18px 18px; border-radius:2px; }
+  .role-card.ai{ border-top:2px solid var(--verdigris); }
+  .role-card.human{ border-top:2px solid var(--brass); }
+  .role-card h4{ font-size:18px; margin-bottom:6px; }
+  .role-card p{ font-size:13.6px; margin:0; }
+
+  /* -------- rituals -------- */
+  .rituals-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; margin-top:36px; }
+  details.ritual{
+    background:var(--ink-2); border:1px solid var(--rule); border-radius:2px;
+    padding:18px 20px; transition:border-color .2s ease;
+  }
+  details.ritual[open]{ border-color:var(--brass); }
+  details.ritual summary{
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
+  }
+  details.ritual summary::-webkit-details-marker{ display:none; }
+  .ritual-num{ font-family:var(--mono); color:var(--brass); font-size:12px; margin-right:8px; }
+  .ritual-name{ font-family:var(--serif); font-size:18px; color:var(--ivory); font-weight:600; }
+  .ritual-sub{ font-size:13px; color:var(--ivory-dim); font-style:italic; margin-top:4px; }
+  .ritual-toggle{ font-family:var(--mono); color:var(--brass); font-size:18px; flex-shrink:0; }
+  .ritual-body{ margin-top:14px; border-top:1px solid var(--rule); padding-top:14px; }
+  .ritual-body .flabel{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); display:block; margin:10px 0 3px; }
+  .ritual-body p{ font-size:13.8px; margin:0 0 4px; color:var(--ivory); }
+  .ritual-replaces{ font-family:var(--mono); font-size:11.5px; color:var(--verdigris); margin-top:6px; }
+
+  /* -------- artifacts -------- */
+  .artifact-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin-top:36px; }
+  .artifact-card{ background:var(--ink-2); border:1px solid var(--rule); padding:22px; border-radius:2px; }
+  .artifact-card h4{ font-size:20px; color:var(--brass-soft); margin-bottom:4px; }
+  .artifact-card .tagline{ font-size:13px; font-style:italic; color:var(--ivory-dim); margin-bottom:10px; display:block; }
+  .artifact-card p{ font-size:14px; margin:0; }
+
+  /* -------- compliance -------- */
+  .table-wrap{ overflow-x:auto; margin-top:36px; border:1px solid var(--rule); }
+  table.compliance{ width:100%; border-collapse:collapse; min-width:720px; font-size:13.6px; }
+  table.compliance th{
+    background:var(--ink-3); font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--brass); text-align:left; padding:12px 16px; border-bottom:1px solid var(--rule);
+  }
+  table.compliance td{ padding:13px 16px; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--ivory-dim); }
+  table.compliance td:first-child{ color:var(--ivory); font-weight:600; }
+  table.compliance tr:last-child td{ border-bottom:none; }
+
+  /* -------- metrics -------- */
+  .metric-callout{
+    background:var(--ink-2); border:1px solid var(--rule); border-left:3px solid var(--crimson);
+    padding:18px 22px; margin-top:34px; border-radius:2px; font-size:14px;
+  }
+  .metric-callout b{ color:var(--brass-soft); }
+
+  /* -------- lasting -------- */
+  .commit-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:36px; }
+  .commit-card{ background:var(--ink-2); border:1px solid var(--rule); padding:20px 22px; border-radius:2px; }
+  .commit-card h4{ font-size:16px; color:var(--verdigris); margin-bottom:8px; }
+  .commit-card p{ font-size:14px; margin:0; }
+
+  /* -------- closing -------- */
+  .closing{ text-align:center; padding:100px 0 60px; }
+  .closing h2{ font-size:clamp(30px,4vw,44px); margin-bottom:16px; }
+  .closing p{ max-width:56ch; margin:0 auto 26px; }
+  .ack{ font-size:12.5px; color:var(--ivory-dim); max-width:70ch; margin:0 auto; line-height:1.7; }
+  footer{ border-top:1px solid var(--rule); padding:28px 0; text-align:center; }
+  footer p{ margin:0; font-family:var(--mono); font-size:11.5px; color:var(--ivory-dim); letter-spacing:.03em; }
+
+  h2.section-title{ font-size:clamp(28px,4vw,40px); max-width:20ch; }
+  .lead{ font-family:var(--serif); font-style:italic; font-size:19px; color:var(--brass-soft); max-width:52ch; margin-top:14px; }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .medallion-wrap{ order:-1; margin-bottom:10px; }
+    .notes-grid{ grid-template-columns:1fr; }
+    .commit-grid{ grid-template-columns:1fr; }
+    section{ padding:64px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">ENSEMBLE<span>.</span></a>
+    <nav class="navlinks">
+      <a href="#why-now">Why Now</a>
+      <a href="#threads">Six Threads</a>
+      <a href="#model">Model</a>
+      <a href="#rituals">Rituals</a>
+      <a href="#artifacts">Work Products</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#lasting">Built to Last</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">A Standard for Enterprise Technology · v1.0 · August 2026</p>
+        <h1>ENSEMBLE</h1>
+        <p class="tagline">Where craft meets compute.</p>
+        <p class="thesis">A philosophy, an operating model, and a working standard for delivering enterprise technology now that AI has removed the drafting bottleneck — and regulation has caught up with the stakes.</p>
+        <p class="meta">16 RITUALS · 6 WORK PRODUCTS · 1 RULE — AI DRAFTS, HUMANS DECIDE, EVERYTHING IS LOGGED</p>
+      </div>
+      <div class="medallion-wrap">
+        <svg id="medallion" class="medallion" viewBox="0 0 240 240" role="img" aria-label="The Ensemble hallmark" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path id="arcTop" d="M 30,132 A 92,92 0 1,1 210,132" />
+          </defs>
+          <circle cx="120" cy="120" r="98" fill="none" stroke="#c9a227" stroke-width="1.5" opacity="0.85"/>
+          <circle cx="120" cy="120" r="82" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.45"/>
+          <g id="ticks" stroke="#c9a227" stroke-width="1.2" opacity="0.55"></g>
+          <text font-family="IBM Plex Mono" font-size="10.5" fill="#e3c874" letter-spacing="4">
+            <textPath href="#arcTop" xlink:href="#arcTop" startOffset="50%" text-anchor="middle">ENSEMBLE · STANDARD · EST 2026</textPath>
+          </text>
+          <g transform="translate(120,126)">
+            <line x1="-40" y1="-11" x2="40" y2="-11" stroke="#f4efe0" stroke-width="1.3"/>
+            <line x1="-40" y1="0" x2="40" y2="0" stroke="#f4efe0" stroke-width="1.3"/>
+            <line x1="-40" y1="11" x2="40" y2="11" stroke="#f4efe0" stroke-width="1.3"/>
+            <circle cx="-8" cy="-11" r="4.2" fill="#c9a227"/>
+            <circle cx="16" cy="11" r="4.2" fill="#c9a227"/>
+            <path d="M -8,-11 C 10,-30 36,-22 40,0" fill="none" stroke="#c9a227" stroke-width="1.4"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="staff"></div>
+
+  <!-- WHY NOW -->
+  <section id="why-now">
+    <div class="container">
+      <p class="eyebrow">01 — Why Now</p>
+      <h2 class="section-title reveal">Two changes already happened. Most operating models haven't caught up with either.</h2>
+      <div class="notes-grid">
+        <div class="note reveal">
+          <span class="tag">The Clock</span>
+          <p>The EU AI Act's high-risk obligations landed 2 August 2026. DORA has been fully live since January 2025. NIS2 enforcement keeps spreading. This isn't a roadmap item anymore — it's three and a half weeks behind us.</p>
+        </div>
+        <div class="note reveal">
+          <span class="tag">The Tell</span>
+          <p>In June 2026, Scaled Agile rebuilt SAFe itself around AI as a core contributor. Its own practitioners still openly discuss "Why SAFe Hurts" — ceremony weight and role proliferation that predate AI entirely.</p>
+        </div>
+        <div class="note reveal">
+          <span class="tag">The Metric That Broke</span>
+          <p>When AI writes an estimated 30–70% of committed code, "deployment frequency" stops measuring what it used to. The old scoreboard needs new numbers — see Section 09.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- SIX THREADS -->
+  <section id="threads">
+    <div class="container">
+      <p class="eyebrow">02 — Six Threads</p>
+      <h2 class="section-title reveal">What a thousand years of building things actually teaches</h2>
+      <p class="lead reveal">Every era that genuinely changed how people build things left the same six fingerprints — whether the century's breakthrough was a cathedral or a chatbot.</p>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- OPERATING MODEL -->
+  <section id="model">
+    <div class="container">
+      <p class="eyebrow">03 — The Operating Model</p>
+      <h2 class="section-title reveal">Ensemble is the standard. An ensemble is also its smallest working unit.</h2>
+      <p class="lead reveal">Four to eight people, paired at all times with a standing roster of AI teammates — small enough that accountability stays personal.</p>
+
+      <div class="model-block">
+        <h3 class="subhead reveal">Human Roles</h3>
+        <div class="role-grid" id="humanRoles"></div>
+        <h3 class="subhead reveal">The Session — AI Teammates, Never Accountable Parties</h3>
+        <div class="role-grid" id="aiRoles"></div>
+        <h3 class="subhead reveal">Governance</h3>
+        <div class="role-grid" id="govRoles"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- RITUALS -->
+  <section id="rituals">
+    <div class="container">
+      <p class="eyebrow">04 — The Rituals</p>
+      <h2 class="section-title reveal">Sixteen ceremonies. One rule: AI drafts, humans decide, everything is logged.</h2>
+      <p class="lead reveal">Tap any ritual for how it runs, where AI carries the weight, and what it quietly satisfies for compliance.</p>
+      <div class="rituals-grid" id="ritualsGrid"></div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- ARTIFACTS -->
+  <section id="artifacts">
+    <div class="container">
+      <p class="eyebrow">05 — The Work Products</p>
+      <h2 class="section-title reveal">Six artifacts, each borrowed from an era that had already solved the problem once</h2>
+      <div class="artifact-grid" id="artifactGrid"></div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- COMPLIANCE -->
+  <section id="compliance">
+    <div class="container">
+      <p class="eyebrow">06 — Compliance by Design</p>
+      <h2 class="section-title reveal">Every regulation below is satisfied as a byproduct of running the rituals well</h2>
+      <p class="lead reveal">Not a separate compliance workstream running alongside delivery.</p>
+      <div class="table-wrap reveal">
+        <table class="compliance">
+          <thead><tr><th>Regulation / Standard</th><th>Core Ask</th><th>Primary Ensemble Answer</th></tr></thead>
+          <tbody id="complianceBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- METRICS -->
+  <section id="metrics">
+    <div class="container">
+      <p class="eyebrow">07 — Keeping Score</p>
+      <h2 class="section-title reveal">Metrics for the AI era</h2>
+      <p class="lead reveal">The classic DevOps metrics aren't wrong — they're just answering a question AI has quietly changed.</p>
+      <div class="table-wrap reveal">
+        <table class="compliance">
+          <thead><tr><th>Metric</th><th>Replaces / Supplements</th><th>What It Actually Measures</th></tr></thead>
+          <tbody id="metricsBody"></tbody>
+        </table>
+      </div>
+      <div class="metric-callout reveal">
+        <b>A naming collision worth knowing:</b> "DORA metrics" (deployment frequency, lead time, change failure rate, MTTR — from the DevOps Research and Assessment program behind <i>Accelerate</i>) and "DORA" the EU regulation share nothing but an acronym. This standard always spells the metrics program out in full.
+      </div>
+    </div>
+  </section>
+
+  <div class="staff tight"></div>
+
+  <!-- BUILT TO LAST -->
+  <section id="lasting">
+    <div class="container">
+      <p class="eyebrow">08 — Built to Last</p>
+      <h2 class="section-title reveal">A standard survives a hundred years by being designed to be reinterpreted</h2>
+      <p class="lead reveal">Not by refusing to change.</p>
+      <div class="commit-grid" id="commitGrid"></div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">The Full Standard</p>
+      <h2 class="reveal">Read the complete specification</h2>
+      <p class="reveal">This site is the overview. The companion document — <em>Ensemble: A Standard for Enterprise Technology Delivery in the Age of AI, v1.0</em> — carries the full text of all sixteen rituals, the complete regulatory mapping, the glossary, and the governance model, in roughly thirty pages.</p>
+      <p class="ack">Built in dialogue with the Open Practice Library and the Mobius Loop; The Open Group's TOGAF, ArchiMate, IT4IT, O-DA, and O-TTPS standards; Atlassian's and Scaled Agile's published Agile and SAFe resources; the EU Digital Operational Resilience Act (via EIOPA); the EU AI Act (via the Future of Life Institute); the UK House of Commons Library briefing CBP-10003; the NIS2 Directive; ISO/IEC 27001 and 42001; the NIST AI Risk Management Framework and Cybersecurity Framework 2.0; and the DevOps Research and Assessment program behind <em>Accelerate</em>. None of the above endorses this standard — consult qualified counsel before relying on it for an actual compliance program.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>ENSEMBLE — A STANDARD FOR ENTERPRISE TECHNOLOGY DELIVERY IN THE AGE OF AI · V1.0 · AUGUST 2026</p>
+</footer>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const THREADS = [
+  { era:"The Guild & the Cathedral", years:"c. 1100–1400", breakthrough:"Stonemasons' lodges, guild charters, the cathedral tracing floor.", pattern:"A craft standard enforced by peer accountability — work was signed by the person who made it.", answer:"→ The Hallmark, and every Player's name in the Ledger" },
+  { era:"The Press & the Ledger", years:"c. 1450–1600", breakthrough:"Movable type, Venetian double-entry bookkeeping, the joint-stock company.", pattern:"Standardized, interchangeable parts, plus a trust layer that let strangers do business at scale.", answer:"→ The Real Book and the Ledger" },
+  { era:"The First Industrial Revolution", years:"c. 1760–1840", breakthrough:"Steam power, the factory system, canals.", pattern:"A new power source removed a physical bottleneck; shared infrastructure gave everyone something to plug into.", answer:"→ AI and compute as the new power source; the Commons" },
+  { era:"The Second Industrial Revolution", years:"c. 1870–1914", breakthrough:"Electricity, interchangeable machine parts, the assembly line, the first standards bodies.", pattern:"Standardization enabled specialization at colossal scale — and, taken too far, hollowed the work of meaning.", answer:"→ Fast, standardized delivery — craft identity kept intact" },
+  { era:"The Digital & Software Revolution", years:"c. 1950–2010", breakthrough:"Computers, the internet, open protocols, the 2001 Agile Manifesto.", pattern:"A deliberate reaction against heavyweight process, in favor of working software and real collaboration.", answer:"→ Ensemble inherits that intent, and pushes back on what scaling agile became" },
+  { era:"The Intelligence Revolution", years:"2020s–", breakthrough:"Foundation models, agentic AI, and the law to govern them, arriving in step.", pattern:"A new power source for cognitive work, with its trust layer designed in from the start.", answer:"→ This standard" },
+];
+
+const HUMAN_ROLES = [
+  { name:"Bandleader", desc:"The accountable owner. Sets direction, can say no, and is the one name always attached to the work." },
+  { name:"Principal", desc:"The technical and architectural authority — \u201cfirst chair.\u201d Makes and owns every structural call." },
+  { name:"Players", desc:"The rest of the cross-functional crew — whoever the specific work actually needs." },
+];
+const AI_ROLES = [
+  { name:"Copyist", desc:"Drafts specs, docs, tickets, and first-pass code — anything that used to start from a blank page." },
+  { name:"Tuner", desc:"Runs continuous, automated policy-as-code checks. Always on, never scheduled." },
+  { name:"Roadie", desc:"Environment provisioning, access, CI/CD — the mechanical work, done in minutes." },
+  { name:"Critic", desc:"The adversarial reviewer. Stress-tests security, bias, accessibility before any human looks." },
+  { name:"Archivist", desc:"Keeps the Commons and Real Book current; surfaces precedent unprompted." },
+  { name:"Scout", desc:"Watches the outside world — regulatory change, vendor risk — and flags impact early." },
+];
+const GOV_ROLES = [
+  { name:"Guild Council", desc:"Cross-Ensemble governance. The accountable management body NIS2 and ISO/IEC 42001 expect to exist." },
+  { name:"Assay Office", desc:"Independent of every Ensemble's chain of command. The only body that can issue a Hallmark." },
+];
+
+const RITUALS = [
+  { n:1, name:"The Booking", sub:"Chartering new work — played only if it deserves to be", replaces:"Project intake, business case", purpose:"Decide, quickly and honestly, whether a piece of work deserves to be played — and who owns it.", how:"Scout drafts precedent and risk classification overnight; a human sponsor and prospective Bandleader make the call in twenty minutes.", ai:"Scout and Archivist do the research so the human conversation starts from a draft.", reg:"First entry in the Ledger — where AI Act risk tiering and DORA criticality classification begin." },
+  { n:2, name:"Tuning Up", sub:"Onboarding a person, or a whole Ensemble", replaces:"Onboarding, access provisioning", purpose:"Get a new person from a standing start to fully able to contribute — hours, not weeks.", how:"Roadie provisions accounts and environments automatically; Archivist assembles a starter pack from the Commons.", ai:"Roadie and Archivist handle all mechanical setup.", reg:"Access logged against least-privilege controls under ISO/IEC 27001 and NIS2 Article 21." },
+  { n:3, name:"Woodshedding", sub:"Protected time to go deep, alone or in a pair", replaces:"\u201cFocus time\u201d", purpose:"Give people real, protected time to go deep before anything is shared with the group.", how:"Research or a hard problem, worked through with a Copyist or Critic on call, no obligation to show anything until ready.", ai:"On-demand drafting and pressure-testing, entirely private.", reg:"Deliberately none — the one ritual with no Ledger entry, on purpose." },
+  { n:4, name:"The Rehearsal", sub:"Planning that arrives already drafted", replaces:"Sprint planning", purpose:"Agree what's being built and why — with drafting already done, so the room is for judgment.", how:"Copyist turns the Setlist into a draft Score overnight; the Ensemble tests it against reality.", ai:"Copyist drafts, Archivist cross-references dependencies; humans decide.", reg:"The agreed Score satisfies DORA's documentation and AI Act Article 11." },
+  { n:5, name:"The Draw", sub:"Architecture, drawn in the open", replaces:"Architecture review", purpose:"Give the work its structural bones — like a master mason's cathedral tracing floor.", how:"Archivist proposes patterns from the Real Book; Critic stress-tests them; the Principal decides.", ai:"Options and stress-tests are AI-drafted; the structural call is always human.", reg:"A continuously running TOGAF ADM cycle, live inside the Score." },
+  { n:6, name:"The Muster", sub:"The daily sync that skips the status theater", replaces:"Daily standup", purpose:"Surface only the two or three things that genuinely need a human decision.", how:"Archivist posts an overnight digest before anyone arrives; nobody narrates status aloud.", ai:"All status aggregation happens before the meeting.", reg:"The daily digest is itself a continuous, timestamped Ledger entry." },
+  { n:7, name:"The Take", sub:"One real, finished thing — not partial progress on five", replaces:"Sprint / iteration", purpose:"Produce one real, demoable piece of work rather than partial progress on many.", how:"Ends when it ends, not when the calendar says so; declared done, reviewed, kept or treated as an outtake.", ai:"The full Session supports execution; humans decide what \u201cdone\u201d means.", reg:"Short Takes shrink blast radius — supporting DORA resilience and NIS2 change management." },
+  { n:8, name:"The Runthrough", sub:"What a machine should catch, caught before a human looks", replaces:"Code review / QA gate", purpose:"Catch what a machine should catch before spending a person's attention on it.", how:"Critic adversarially tests security, accessibility, and Rider conformance; humans judge what's left.", ai:"Critic does the exhaustive first pass; humans judge if it's actually right.", reg:"Satisfies DORA's resilience-testing pillar on every Take, not once a quarter." },
+  { n:9, name:"The Assay", sub:"Proof, not assertion — tuned continuously, certified independently", replaces:"Compliance sign-off", purpose:"Prove a piece of work meets the standard, like a historic assay office testing metal purity.", how:"Tuner runs continuous checks; the independent Assay Office runs a periodic deeper Assay and applies the Hallmark.", ai:"Tuner catches drift in real time; humans make the certification call.", reg:"Core mechanism for continuous ISO/IEC 27001, 42001, DORA, and SOX-style evidence." },
+  { n:10, name:"The Gig", sub:"Shipped to the people it's actually for", replaces:"Release / sprint review", purpose:"Put the work in front of the people it's actually for, and treat the moment like it matters.", how:"No dress rehearsal to a proxy stakeholder — demoed live to the real audience.", ai:"Roadie handles the mechanical release; the Session steps back.", reg:"Standing checklist confirms AI Act Article 50 disclosures are live before shipping." },
+  { n:11, name:"The Encore", sub:"Watching closely, without the anxious week", replaces:"Hypercare", purpose:"Watch closely right after release, without a week of anxious babysitting.", how:"Tuner and Scout carry monitoring; humans are on call only for real judgment calls.", ai:"Continuous automated monitoring and anomaly flagging.", reg:"A clean, closed Encore drives a low mean time to recovery." },
+  { n:12, name:"The Listen-Back", sub:"Learning from the tape, not from memory", replaces:"Retrospective", purpose:"Actually learn from what happened — blamelessly, grading AI's performance too.", how:"Archivist pulls the objective Ledger record so the conversation starts from fact.", ai:"Archivist supplies the record; Critic's own performance can be graded here.", reg:"A documented, blameless learning process expected under NIS2 and ISO/IEC 27001." },
+  { n:13, name:"Chops", sub:"A real, public path — Apprentice to Journeyman to Master", replaces:"Performance review", purpose:"Grow people deliberately and celebrate it publicly, the way a guild once did.", how:"Archivist keeps a visible skills record; every consequential call stays human, in conversation.", ai:"Surfaces evidence only — never renders a verdict about a person.", reg:"Deliberately human-decided to stay clear of the AI Act's Annex III employment category." },
+  { n:14, name:"Broken String", sub:"Fix it, keep playing, argue about it later", replaces:"Incident response", purpose:"Respond fast and blamelessly, with the regulatory clock already running correctly.", how:"Severity classified immediately; Tuner and Scout assemble the timeline; a Listen-Back always follows.", ai:"Automated timeline reconstruction and severity classification.", reg:"Thresholds pre-mapped to DORA major-incident and NIS2 notification clocks." },
+  { n:15, name:"Guest Musicians", sub:"Vetting everyone else's instrument before it's on your stage", replaces:"Vendor risk assessment", purpose:"Vet and continuously monitor every outside dependency, cloud provider, or AI model.", how:"Scout drafts a criticality tier; the Assay Office confirms contractual assurances before go-live.", ai:"Scout watches continuously for provider or model changes that shift the risk picture.", reg:"Builds and maintains DORA's Register of Information for ICT third parties." },
+  { n:16, name:"The Festival", sub:"The big cross-team event, finally worth attending", replaces:"PI Planning / Big Room Planning", purpose:"Align multiple Ensembles and actually celebrate what shipped, in one event worth attending.", how:"Archivist pre-aggregates every dependency and risk; the Guild Council spends the time on trade-offs.", ai:"All room-scale data-gathering happens automatically beforehand.", reg:"Where the Guild Council exercises NIS2 Article 20 and ISO/IEC 42001 Clause 5 accountability." },
+];
+
+const ARTIFACTS = [
+  { name:"The Score", tag:"The living spec everyone plays from", desc:"What's being built, why, its shape, its open questions — versioned and kept current, never written once and left to rot." },
+  { name:"The Rider", tag:"The non-functional contract, negotiated like a real one", desc:"Performance, security, accessibility, data residency, resilience SLAs — named up front, checked at every gate." },
+  { name:"The Real Book", tag:"The shared library of pre-approved patterns", desc:"Reusing a pattern inherits its already-proven Hallmark — faster and safer than building bespoke every time." },
+  { name:"The Setlist", tag:"The backlog, balanced on purpose", desc:"\u201cThe hits\u201d (reliability, tech debt) weighed deliberately against \u201cnew material\u201d (innovation) so neither starves." },
+  { name:"The Ledger", tag:"The append-only evidence trail", desc:"Every decision, every contribution, every approval — each with a named human signer. Never \u201cthe AI decided.\u201d" },
+  { name:"The Hallmark", tag:"The mark, applied only by an independent hand", desc:"Modeled on a goldsmith's hallmark — stamped only by the Assay Office, never the maker. Visible, traceable, revocable." },
+];
+
+const COMPLIANCE = [
+  ["DORA (EU 2022/2554)", "Operational resilience for financial entities and their ICT chain", "The Score, the Ledger, Broken String, Guest Musicians"],
+  ["EU AI Act (EU 2024/1689)", "Risk-tiered obligations on providers and deployers of AI systems", "The Booking's screening, the Ledger, Chops kept human-decided, Guest Musicians"],
+  ["NIS2 (EU 2022/2555)", "Cybersecurity risk management, incident reporting, board accountability", "Tuner, Broken String, the Guild Council"],
+  ["GDPR (EU 2016/679)", "Lawful, fair, transparent, minimized processing of personal data", "The Rider, a privacy check built into the Draw"],
+  ["ISO/IEC 27001:2022", "Certified information security management system", "The Ledger as evidence backbone, the Assay Office as internal audit"],
+  ["ISO/IEC 42001:2023", "Certified AI management system", "The Guild Council owns AI policy; the Assay Office certifies"],
+  ["NIST AI RMF / CSF 2.0", "Govern, Map, Measure, Manage — voluntary but widely referenced", "Guild Council, the Booking, Tuner and the Runthrough, Broken String"],
+  ["TOGAF / IT4IT / O-DA / O-TTPS", "Enterprise architecture, IT value chain, assured architecture, supply chain integrity", "The Draw and the Score, the ritual flow, the Assay Office, Guest Musicians"],
+  ["SOX / COBIT", "Financial reporting controls, IT governance", "The Ledger as ITGC evidence, the Guild Council / Assay Office split"],
+  ["UK sectoral regime", "Context-based regulation via existing sector regulators", "The Ledger's evidence, pointed at whichever regulator applies"],
+];
+
+const METRICS = [
+  ["Time to Judgment", "Deployment frequency, lead time", "How long from \u201cAI draft ready\u201d to \u201chuman decision made\u201d — the new bottleneck."],
+  ["Hallmark Coverage", "\u201cDefinition of done\u201d checklists", "The share of shipped work carrying a valid, current Hallmark."],
+  ["Real Book Reuse Rate", "— (new)", "The share of new work built from pre-verified patterns rather than from scratch."],
+  ["AI-Assist Override Rate", "— (new)", "How often humans override Session output — the leading signal of trust calibration."],
+  ["Fun / Psychological Safety Index", "Engagement survey", "Whether people actually want to be there — measured, not inferred from attrition."],
+];
+
+const COMMITMENTS = [
+  { name:"Strike a Ritual", desc:"Any ceremony a majority of Ensembles vote to skip for two straight quarters is automatically retired — unless someone champions its revival with evidence." },
+  { name:"The Ten Percent Rule", desc:"No more than 10% of paid time may go to ceremony overhead, measured transparently from the Ledger's own data, not self-reported." },
+  { name:"Vocabulary Is Optional", desc:"Any org may run \u201cEnsemble in translation\u201d with conventional names. What must survive is the model: AI drafts, humans decide, everything is logged." },
+  { name:"Vendor & Model Neutrality", desc:"No named cloud, tool, or AI model appears in this standard's core — only interfaces. Built to outlive this generation of AI." },
+];
+
+// ============================================================
+// RENDER
+// ============================================================
+function el(tag, cls, html){ const e = document.createElement(tag); if(cls) e.className = cls; if(html!==undefined) e.innerHTML = html; return e; }
+
+const timeline = document.getElementById('timeline');
+THREADS.forEach(t => {
+  const d = el('div','thread reveal');
+  d.innerHTML = `<div class="years">${t.years}</div><h3>${t.era}</h3><p class="breakthrough">${t.breakthrough}</p><p class="pattern">${t.pattern}</p><div class="answer">${t.answer}</div>`;
+  timeline.appendChild(d);
+});
+
+function renderRoles(containerId, list, kind){
+  const c = document.getElementById(containerId);
+  list.forEach(r => {
+    const d = el('div', 'role-card ' + kind + ' reveal');
+    d.innerHTML = `<h4>${r.name}</h4><p>${r.desc}</p>`;
+    c.appendChild(d);
+  });
+}
+renderRoles('humanRoles', HUMAN_ROLES, 'human');
+renderRoles('aiRoles', AI_ROLES, 'ai');
+renderRoles('govRoles', GOV_ROLES, 'human');
+
+const ritualsGrid = document.getElementById('ritualsGrid');
+RITUALS.forEach(r => {
+  const d = document.createElement('details');
+  d.className = 'ritual reveal';
+  d.innerHTML = `
+    <summary>
+      <div>
+        <span class="ritual-num">${String(r.n).padStart(2,'0')}</span><span class="ritual-name">${r.name}</span>
+        <div class="ritual-sub">${r.sub}</div>
+      </div>
+      <span class="ritual-toggle">+</span>
+    </summary>
+    <div class="ritual-body">
+      <div class="ritual-replaces">Replaces: ${r.replaces}</div>
+      <span class="flabel">Purpose</span><p>${r.purpose}</p>
+      <span class="flabel">How it runs</span><p>${r.how}</p>
+      <span class="flabel">Where AI carries the weight</span><p>${r.ai}</p>
+      <span class="flabel">Regulatory traceability</span><p>${r.reg}</p>
+    </div>`;
+  ritualsGrid.appendChild(d);
+});
+
+const artifactGrid = document.getElementById('artifactGrid');
+ARTIFACTS.forEach(a => {
+  const d = el('div','artifact-card reveal');
+  d.innerHTML = `<h4>${a.name}</h4><span class="tagline">${a.tag}</span><p>${a.desc}</p>`;
+  artifactGrid.appendChild(d);
+});
+
+const complianceBody = document.getElementById('complianceBody');
+COMPLIANCE.forEach(row => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = row.map(c => `<td>${c}</td>`).join('');
+  complianceBody.appendChild(tr);
+});
+
+const metricsBody = document.getElementById('metricsBody');
+METRICS.forEach(row => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = row.map(c => `<td>${c}</td>`).join('');
+  metricsBody.appendChild(tr);
+});
+
+const commitGrid = document.getElementById('commitGrid');
+COMMITMENTS.forEach(c => {
+  const d = el('div','commit-card reveal');
+  d.innerHTML = `<h4>${c.name}</h4><p>${c.desc}</p>`;
+  commitGrid.appendChild(d);
+});
+
+// toggle +/- indicator
+document.addEventListener('toggle', (e) => {
+  if(e.target.matches('details.ritual')){
+    const toggle = e.target.querySelector('.ritual-toggle');
+    toggle.textContent = e.target.open ? '\u2212' : '+';
+  }
+}, true);
+
+// scroll reveal — progressive enhancement only. Content is visible by default (see CSS);
+// we opt INTO the animated pre-hidden state only once we know we can reveal it again.
+try {
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduceMotion && typeof IntersectionObserver !== 'undefined'){
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+} catch(e){ /* content already visible by default — nothing to fix */ }
+
+// medallion tick marks
+(function(){
+  const ticksGroup = document.getElementById('ticks');
+  const cx = 120, cy = 120, rOuter = 90, rInner = 84;
+  for(let i = 0; i < 36; i++){
+    const angle = (i / 36) * Math.PI * 2;
+    const x1 = cx + rOuter * Math.cos(angle), y1 = cy + rOuter * Math.sin(angle);
+    const x2 = cx + rInner * Math.cos(angle), y2 = cy + rInner * Math.sin(angle);
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1.toFixed(2)); line.setAttribute('y1', y1.toFixed(2));
+    line.setAttribute('x2', x2.toFixed(2)); line.setAttribute('y2', y2.toFixed(2));
+    ticksGroup.appendChild(line);
+  }
+  if(!reduceMotion){
+    const medallion = document.getElementById('medallion');
+    medallion.style.opacity = '0';
+    medallion.style.transform = 'scale(.92) rotate(-4deg)';
+    medallion.style.transition = 'opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1)';
+    requestAnimationFrame(() => {
+      setTimeout(() => { medallion.style.opacity = '1'; medallion.style.transform = 'scale(1) rotate(0deg)'; }, 120);
+    });
+  }
+})();
+</script>
+</body>
+</html>
