@@ -73,7 +73,7 @@ These principles are intentionally stable. Tools, regulations and architectures 
 4. **Guardrails before gates.** Prefer automated, preventative constraints and paved roads over queues for manual approval.
 5. **Reversibility before certainty.** Make small, observable, reversible changes when uncertainty is high.
 6. **Platforms before repeated toil.** Solve common hard problems once and make the solution easy to consume.
-7. **Human accountability over machine autonomy.** AI may act; a human governance system remains accountable for the authority granted.
+7. **Human accountability over machine autonomy.** AI may act; a human governance system remains accountable for the authority granted. Where a deterministic check and a model judgement disagree, the deterministic check governs.
 8. **Secure, private and resilient by default.** Safety properties belong in the default path, not in heroic review at the end.
 9. **Open interfaces over local empires.** Stable boundaries and portable knowledge outlive teams and vendors.
 10. **Measure systems, not people.** Metrics improve the system; they are not weapons for ranking individual knowledge workers.
@@ -205,7 +205,7 @@ Every material production change produces a **Proof Bundle** automatically. The 
 - supplier or model versions;
 - regulatory/control mappings.
 
-This makes compliance **ambient**: the evidence needed to demonstrate safe delivery is generated while delivery happens.
+This makes compliance **ambient**: the evidence needed to demonstrate safe delivery is generated while delivery happens. A Proof Bundle is immutable once sealed and carries its own content digest; re-analysing the same change produces a new, versioned bundle rather than altering the original.
 
 ---
 
@@ -271,6 +271,18 @@ An AI system can be permitted to do anything that a well-governed software servi
 | Procurement | supplier research, contract comparison, concentration analysis | negotiation, legal acceptance, strategic supplier decisions |
 | People | contextual onboarding, skill coaching, knowledge retrieval | management, mentoring, performance judgement |
 
+### 8.5 Bounded review contracts
+
+Where AI performs structured review — architecture, security, reliability, cost, change governance and similar — each reviewer operates under a written contract:
+
+- a fixed **jurisdiction**: the evidence it may consider and the questions it may answer;
+- an explicit **must-not-decide** list: questions reserved for another reviewer or for a human;
+- a **versioned output schema**: verdict, rationale, confidence and the evidence identifiers relied on;
+- **evidence honesty**: a reviewer may interpret evidence but may not invent an evidence reference; output below its confidence threshold is a finding requiring human review, not a fact;
+- **no self-approval**: a review, on its own, never authorises a production change; deterministic policy and human approval remain authoritative.
+
+A change to any review contract requires a version increment and replay against stored fixtures before it takes effect.
+
 ---
 
 ## 9. Work-product standard
@@ -306,6 +318,11 @@ spec:
   purpose: Record and reconcile customer payment movements
   criticality: C4
   profiles: [BASE, UK-DATA, EU-DORA, UK-FS]
+  customStandards:                     # optional: standards this organisation authored itself
+    - id: ORG-LEDGER-IMMUTABLE
+      title: Ledger writes are append-only
+      content: Settled ledger entries must not be updated or deleted.
+      rule: { dimension: change-approval, directive: require }   # optional structured rule
   dataClasses: [confidential, restricted-personal]
   slo:
     availability: 99.95%
@@ -323,7 +340,7 @@ spec:
     autonomyMax: A2
 ```
 
-The exact schema may vary, but the semantics should be stable and exportable.
+The exact schema may vary, but the semantics should be stable and exportable. `profiles` selects curated external regimes (see §13); `customStandards` holds only standards the organisation authored itself and are always in force for that service.
 
 ---
 
@@ -485,6 +502,29 @@ As of this draft:
 ### 13.4 Standards alignment
 
 Meridian is designed to complement, not replace, management-system and technical standards. A conformant implementation should be able to map its evidence to adopted standards such as ISO/IEC 27001, ISO/IEC 20000-1, ISO 22301, ISO/IEC 42001, NIST CSF 2.0, NIST SSDF and PCI DSS where applicable.
+
+### 13.5 Standard bundles
+
+Obligations reach a service as **bundles**: curated, versioned sets of control statements. A profile (§13.2) is delivered as a bundle. Each bundle declares a category:
+
+| Category | Contents | Activation |
+| --- | --- | --- |
+| Baseline SOP | The organisation's own paved-road defaults. | Always in force. |
+| Legislation | Control mappings for a specific law or regulation. | Legal/compliance-owned applicability assessment. |
+| Cyber framework | Voluntary security frameworks such as CIS Controls or NIST CSF. | Adopted by choice; complements, never replaces, a legislation bundle. |
+| Audit & assurance | Attestation criteria such as SOC 2 or internal audit. | Adopted by choice; evidence is reused across mapped obligations, not duplicated. |
+
+A service selects bundles in its Service Passport. The baseline SOP bundle is always active. A bundle is a control-mapping aid, not a determination of legal scope; a qualified owner confirms applicability.
+
+### 13.6 Composed profiles
+
+When several bundles apply, they are composed into one effective obligation set that does not clash, duplicate or silently override. Composition is deterministic and follows a fixed order:
+
+1. **Deduplicate.** Identical requirements on the same control dimension collapse to one, retaining every source.
+2. **Take the strictest.** Where requirements differ by degree — a shorter maximum, a longer minimum, a tighter threshold — the strictest surviving constraint applies, and every contributing obligation is recorded against it.
+3. **Escalate genuine conflict.** Where two obligations truly contradict — one prohibits what another requires; a mandated minimum exceeds a mandated maximum — the system does not choose. It records the conflict and routes it to the accountable legal or compliance owner, who selects the governing obligation or grants a time-bound exception. An unresolved conflict blocks the change.
+
+The composed set and its reconciliation record are part of the Proof Bundle, so Regulator Replay can show which obligations were in force and how overlaps were resolved at the time of a change. This complements §11.3: §11.3 forbids duplicating *evidence*; §13.6 governs overlapping *requirements*.
 
 ---
 
